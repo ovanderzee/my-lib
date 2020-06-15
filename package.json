@@ -1,0 +1,42 @@
+{
+  "name": "unrelateables",
+  "version": "1.0.0",
+  "description": "library of unrelated functions",
+  "main": "dist/unrelateables.js",
+  "module": "module/unrelateables.js",
+  "scripts": {
+    "prebuild": "cf dist module && prettier './src/*.js' --write",
+    "build": "rollup --config",
+    "coverage": "cf coverage && jest --coverage",
+    "once": "npm run test && npm run build",
+    "pretest": "eslint src/*.js",
+    "test": "jest",
+    "watch": "onchange --initial \"src/*.js\" -- npm run once --silent"
+  },
+  "keywords": [
+    "library",
+    "math",
+    "number",
+    "string",
+    "boolean",
+    "front-end"
+  ],
+  "author": "Onno van der Zee",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
+    "@rollup/plugin-commonjs": "^13.0.0",
+    "@rollup/plugin-node-resolve": "^8.0.1",
+    "clear-folder": "^2.0.0",
+    "eslint": "^7.2.0",
+    "eslint-plugin-jasmine": "^4.1.1",
+    "eslint-plugin-jest": "^23.13.2",
+    "jest": "^26.0.1",
+    "onchange": "^7.0.2",
+    "prettier": "^2.0.5",
+    "rollup": "^2.16.1",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-terser": "^6.1.0"
+  }
+}

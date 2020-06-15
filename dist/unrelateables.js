@@ -1,0 +1,2 @@
+!function(e,r){"object"==typeof exports&&"undefined"!=typeof module?r(exports,require("number/isUsableNumber")):"function"==typeof define&&define.amd?define(["exports","number/isUsableNumber"],r):r((e=e||self).unrelateables={},e.isUsableNumber)}(this,(function(e,r){"use strict";Object.defineProperty(e,"isUsableNumber",{enumerable:!0,get:function(){return r.isUsableNumber}}),Object.defineProperty(e,"__esModule",{value:!0})}));
+//# sourceMappingURL=unrelateables.js.map
