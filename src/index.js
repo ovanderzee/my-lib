@@ -1,13 +1,21 @@
 import { isUsableNumber } from './number/isUsableNumber'
+import {
+    isChar,
+    isDigit,
+    isLetter,
+    isLower,
+    isUpper,
+} from './string/isCharType'
+import { isAlphaNumeric } from './string/isStringType'
+import { isExactMatch } from './regex/isExactMatch'
 
-/*
-
-prefix:
-is: function returning a boolean
-
-postfix
-number: functions doing something but calculating with numbers
-
-*/
-
-export { isUsableNumber }
+export {
+    isUsableNumber,
+    isChar,
+    isDigit,
+    isLetter,
+    isLower,
+    isUpper,
+    isAlphaNumeric,
+    isExactMatch,
+}

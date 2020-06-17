@@ -6,11 +6,23 @@
     <script src="../dist/myLib.js"></script>
   </head>
   <body>
-    See console
+    <h3>my-lib, UMD-package</h3>
     <script>
       console.log('typeof myLib.isUsableNumber', typeof myLib.isUsableNumber)
       console.log('myLib.isUsableNumber(1,2,3)', myLib.isUsableNumber(1,2,3))
       console.log('myLib.isUsableNumber(1,2,NaN)', myLib.isUsableNumber(1,2,NaN))
+      let table = '<table>'
+      for (const prop in myLib) {
+        table += '<tr>'
+        table += `<td>${prop}</td>`
+        table += `<td>${typeof myLib[prop]}</td>`
+        table += '</tr>'
+      }
+      table += '</table>'
+      document.body.innerHTML += table
     </script>
+    <p>
+      Example in console
+    </p>
   </body>
 </html>
