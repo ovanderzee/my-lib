@@ -1,9 +1,9 @@
 {
-  "name": "unrelateables",
+  "name": "my-lib",
   "version": "1.0.0",
   "description": "library of unrelated functions",
-  "main": "dist/unrelateables.js",
-  "module": "module/unrelateables.js",
+  "main": "dist/my-lib.js",
+  "module": "module/my-lib.js",
   "scripts": {
     "prebuild": "cf dist module && prettier './src/*.js' --write",
     "build": "rollup --config",
