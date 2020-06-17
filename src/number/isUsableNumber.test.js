@@ -1,7 +1,6 @@
 import { isUsableNumber } from './isUsableNumber'
 
 describe('isUsableNumber', () => {
-
     test('tests for numbers', () => {
         expect(isUsableNumber(74524)).toBe(true)
         expect(isUsableNumber(3.4e-34)).toBe(true)
@@ -47,5 +46,4 @@ describe('isUsableNumber', () => {
         expect(isUsableNumber(5, 'x')).toBe(false)
         expect(isUsableNumber(undefined, NaN)).toBe(false)
     })
-
 })

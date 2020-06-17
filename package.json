@@ -1,17 +1,18 @@
 {
   "name": "my-lib",
   "version": "1.0.0",
-  "description": "library of unrelated functions",
+  "description": "library of recurring unconnected functions",
   "main": "dist/my-lib.js",
   "module": "module/my-lib.js",
   "scripts": {
-    "prebuild": "cf dist module && prettier './src/*.js' --write",
+    "prebuild": "cf dist module && prettier './src/**/*.js' --write",
+    "postbuild": "jsdoc2md src/**/*.js > API.md",
     "build": "rollup --config",
     "coverage": "cf coverage && jest --coverage",
     "once": "npm run test && npm run build",
     "pretest": "eslint src/*.js",
     "test": "jest",
-    "watch": "onchange --initial \"src/*.js\" -- npm run once --silent"
+    "watch": "onchange --initial \"src/**/*.js\" -- npm run once --silent"
   },
   "keywords": [
     "library",
@@ -23,6 +24,14 @@
   ],
   "author": "Onno van der Zee",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ovanderzee/my-lib.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ovanderzee/my-lib/issues"
+  },
+  "homepage": "https://github.com/ovanderzee/my-lib#readme",
   "devDependencies": {
     "@babel/core": "^7.10.2",
     "@babel/preset-env": "^7.10.2",
@@ -33,6 +42,7 @@
     "eslint-plugin-jasmine": "^4.1.1",
     "eslint-plugin-jest": "^23.13.2",
     "jest": "^26.0.1",
+    "jsdoc-to-markdown": "^6.0.1",
     "onchange": "^7.0.2",
     "prettier": "^2.0.5",
     "rollup": "^2.16.1",

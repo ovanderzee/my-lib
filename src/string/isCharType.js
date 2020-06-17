@@ -1,37 +1,36 @@
-
 /**
  * Helper Test for being a string with length 1
- * @param {String} char
- * @returns {Boolean} is a single character
+ * @param {string} char
+ * @returns {boolean} is a single character
  */
-const isChar = char => {
+const isChar = (char) => {
     return Boolean(char && typeof char === 'string' && char.length === 1)
 }
 
 /**
  * Test for being a string representation of a digit
- * @param {String} char
- * @returns {Boolean} is a number 0-9
+ * @param {string} char
+ * @returns {boolean} is a number 0-9
  */
-const isDigit = char => {
+const isDigit = (char) => {
     return isChar(char) && Boolean(char.match(/[0-9]/))
 }
 
 /**
  * Test for being a letter
- * @param {String} char
- * @returns {Boolaen} char is a letter
+ * @param {string} char
+ * @returns {boolean} char is a letter
  */
-const isLetter = char => {
+const isLetter = (char) => {
     return isChar(char) && char.toLowerCase() !== char.toUpperCase()
 }
 
 /**
  * Test for being a lowercase letter
- * @param {String} char
- * @returns {Boolaen} char is a lower-case letter
+ * @param {string} char
+ * @returns {boolean} char is a lower-case letter
  */
-const isLower = char => {
+const isLower = (char) => {
     return (
         isChar(char) &&
         char === char.toLowerCase() &&
@@ -41,10 +40,10 @@ const isLower = char => {
 
 /**
  * Test for being an uppercase letter
- * @param {String} char
- * @returns {Boolaen} char is a upper-case letter
+ * @param {string} char
+ * @returns {boolean} char is a upper-case letter
  */
-const isUpper = char => {
+const isUpper = (char) => {
     return (
         isChar(char) &&
         char === char.toUpperCase() &&

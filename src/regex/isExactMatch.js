@@ -1,9 +1,8 @@
-
 /**
  * Check for a match covering the string entirely
- * @param {String} word
+ * @param {string} word
  * @param {RegExp} regex
- * @returns {Boolean}
+ * @returns {boolean}
  */
 const isExactMatch = (word, regex) => {
     const match = word.match(regex)

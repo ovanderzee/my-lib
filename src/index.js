@@ -9,6 +9,9 @@ import {
 import { isAlphaNumeric } from './string/isStringType'
 import { isExactMatch } from './regex/isExactMatch'
 
+/**
+ * Bundle as-is
+ */
 export {
     isUsableNumber,
     isChar,
