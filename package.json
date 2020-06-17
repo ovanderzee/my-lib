@@ -1,9 +1,9 @@
 {
   "name": "my-lib",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "library of recurring unconnected functions",
-  "main": "dist/my-lib.js",
-  "module": "module/my-lib.js",
+  "main": "dist/myLib.js",
+  "module": "module/myLib.js",
   "scripts": {
     "prebuild": "cf dist module && prettier './src/**/*.js' --write",
     "postbuild": "jsdoc2md src/**/*.js > API.md",
