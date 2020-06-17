@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Unrelateables, ES-6 module</title>
+  </head>
+  <body>
+    See console
+    <script type="module">
+      import { isUsableNumber } from '../module/unrelateables.js'
+      console.log('typeof isUsableNumber', typeof isUsableNumber)
+      console.log('isUsableNumber(1,2,3)', isUsableNumber(1,2,3))
+      console.log('isUsableNumber(1,2,NaN)', isUsableNumber(1,2,NaN))
+    </script>
+  </body>
+</html>
