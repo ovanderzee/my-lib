@@ -3,6 +3,7 @@ node_modules
 src
 test
 coverage
+server.js
 .travis.yml
 *.map
 *.config.js
