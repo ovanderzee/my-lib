@@ -1,6 +1,9 @@
 ## Functions
 
 <dl>
+<dt><a href="#isAttachedToDom">isAttachedToDom(node)</a> ⇒ <code>Boolean</code></dt>
+<dd><p>Check for the node being inside the DOM</p>
+</dd>
 <dt><a href="#roundAtDecimals">roundAtDecimals(origin, decimals)</a> ⇒ <code>number</code></dt>
 <dd><p>Round at decimals</p>
 </dd>
@@ -31,7 +34,22 @@
 <dt><a href="#isAlphaNumeric">isAlphaNumeric(line)</a> ⇒ <code>boolean</code></dt>
 <dd><p>Test for being a string consisting of letters and/or digits</p>
 </dd>
+<dt><a href="#isPrimitive">isPrimitive(value)</a> ⇒ <code>boolean</code></dt>
+<dd><p>Check for primitives</p>
+</dd>
 </dl>
+
+<a name="isAttachedToDom"></a>
+
+## isAttachedToDom(node) ⇒ <code>Boolean</code>
+Check for the node being inside the DOM
+
+**Kind**: global function  
+**Returns**: <code>Boolean</code> - true when the node is onscreen -- not removed  
+
+| Param | Type |
+| --- | --- |
+| node | <code>Node</code> | 
 
 <a name="roundAtDecimals"></a>
 
@@ -154,4 +172,16 @@ Test for being a string consisting of letters and/or digits
 | Param | Type |
 | --- | --- |
 | line | <code>string</code> | 
+
+<a name="isPrimitive"></a>
+
+## isPrimitive(value) ⇒ <code>boolean</code>
+Check for primitives
+
+**Kind**: global function  
+**Returns**: <code>boolean</code> - is a primitive  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| value | <code>any</code> | any value to check |
 
