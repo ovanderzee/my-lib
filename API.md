@@ -1,6 +1,12 @@
 ## Functions
 
 <dl>
+<dt><a href="#roundAtDecimals">roundAtDecimals(origin, decimals)</a> ⇒ <code>number</code></dt>
+<dd><p>Round at decimals</p>
+</dd>
+<dt><a href="#roundAtDigits">roundAtDigits(origin, digits)</a> ⇒ <code>number</code></dt>
+<dd><p>Round at digits; round with significance</p>
+</dd>
 <dt><a href="#isUsableNumber">isUsableNumber(anonymus)</a> ⇒ <code>boolean</code></dt>
 <dd><p>Test for values with which calculations can be done</p>
 </dd>
@@ -26,6 +32,32 @@
 <dd><p>Test for being a string consisting of letters and/or digits</p>
 </dd>
 </dl>
+
+<a name="roundAtDecimals"></a>
+
+## roundAtDecimals(origin, decimals) ⇒ <code>number</code>
+Round at decimals
+
+**Kind**: global function  
+**Returns**: <code>number</code> - the rounded number  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| origin | <code>number</code> | any number to round |
+| decimals | <code>number</code> | number of decimals to round at |
+
+<a name="roundAtDigits"></a>
+
+## roundAtDigits(origin, digits) ⇒ <code>number</code>
+Round at digits; round with significance
+
+**Kind**: global function  
+**Returns**: <code>number</code> - the rounded number  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| origin | <code>number</code> | any number to round |
+| digits | <code>number</code> | number of digits to round at |
 
 <a name="isUsableNumber"></a>
 

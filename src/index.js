@@ -8,17 +8,20 @@ import {
 } from './string/isCharType'
 import { isAlphaNumeric } from './string/isStringType'
 import { isExactMatch } from './regex/isExactMatch'
+import { roundAtDecimals, roundAtDigits } from './math/round'
 
 /**
  * Bundle as-is
  */
 export {
-    isUsableNumber,
+    isAlphaNumeric,
+    isExactMatch,
     isChar,
     isDigit,
     isLetter,
     isLower,
     isUpper,
-    isAlphaNumeric,
-    isExactMatch,
+    isUsableNumber,
+    roundAtDecimals,
+    roundAtDigits,
 }
