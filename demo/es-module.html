@@ -5,12 +5,25 @@
     <title>my-lib, ES-6 module</title>
   </head>
   <body>
-    See console
+    <h3>my-lib, ES-6 module</h3>
     <script type="module">
-      import { isUsableNumber } from '../module/myLib.js'
-      console.log('typeof isUsableNumber', typeof isUsableNumber)
-      console.log('isUsableNumber(1,2,3)', isUsableNumber(1,2,3))
-      console.log('isUsableNumber(1,2,NaN)', isUsableNumber(1,2,NaN))
+      import * as myLib from '../module/myLib.js'
+      console.log('typeof myLib.isUsableNumber', typeof myLib.isUsableNumber)
+      console.log('myLib.isUsableNumber(1,2,3)', myLib.isUsableNumber(1,2,3))
+      console.log('myLib.isUsableNumber(1,2,NaN)', myLib.isUsableNumber(1,2,NaN))
+      let table = '<table>'
+      for (const prop in myLib) {
+        table += '<tr>'
+        table += `<td>${prop}</td>`
+        table += `<td>${typeof myLib[prop]}</td>`
+        table += '</tr>'
+      }
+      table += '</table>'
+      document.body.innerHTML += table
     </script>
+    <p>
+      Example in console<br />
+      Run using 'npm start'<br />
+    </p>
   </body>
 </html>
