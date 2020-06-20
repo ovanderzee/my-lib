@@ -1,5 +1,5 @@
 /**
- * Check for primitives
+ * Check value for being a primitive
  * @param {any} value - any value to check
  * @returns {boolean} is a primitive
  */

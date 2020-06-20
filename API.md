@@ -1,8 +1,8 @@
 ## Functions
 
 <dl>
-<dt><a href="#isAttachedToDom">isAttachedToDom(node)</a> ⇒ <code>Boolean</code></dt>
-<dd><p>Check for the node being inside the DOM</p>
+<dt><a href="#isAttachedToDom">isAttachedToDom(node)</a> ⇒ <code>boolean</code></dt>
+<dd><p>Check node for being part of the DOM</p>
 </dd>
 <dt><a href="#roundAtDecimals">roundAtDecimals(origin, decimals)</a> ⇒ <code>number</code></dt>
 <dd><p>Round at decimals</p>
@@ -17,35 +17,35 @@
 <dd><p>Check for a match covering the string entirely</p>
 </dd>
 <dt><a href="#isChar">isChar(char)</a> ⇒ <code>boolean</code></dt>
-<dd><p>Helper Test for being a string with length 1</p>
+<dd><p>Test value for being a character; a string with a length of one</p>
 </dd>
 <dt><a href="#isDigit">isDigit(char)</a> ⇒ <code>boolean</code></dt>
-<dd><p>Test for being a string representation of a digit</p>
+<dd><p>Test value for being a string representation of a digit</p>
 </dd>
 <dt><a href="#isLetter">isLetter(char)</a> ⇒ <code>boolean</code></dt>
-<dd><p>Test for being a letter</p>
+<dd><p>Test value for being a letter</p>
 </dd>
 <dt><a href="#isLower">isLower(char)</a> ⇒ <code>boolean</code></dt>
-<dd><p>Test for being a lowercase letter</p>
+<dd><p>Test value for being a lowercase letter</p>
 </dd>
 <dt><a href="#isUpper">isUpper(char)</a> ⇒ <code>boolean</code></dt>
-<dd><p>Test for being an uppercase letter</p>
+<dd><p>Test value for being an uppercase letter</p>
 </dd>
-<dt><a href="#isAlphaNumeric">isAlphaNumeric(line)</a> ⇒ <code>boolean</code></dt>
+<dt><a href="#isAlphaNumeric">isAlphaNumeric(word)</a> ⇒ <code>boolean</code></dt>
 <dd><p>Test for being a string consisting of letters and/or digits</p>
 </dd>
 <dt><a href="#isPrimitive">isPrimitive(value)</a> ⇒ <code>boolean</code></dt>
-<dd><p>Check for primitives</p>
+<dd><p>Check value for being a primitive</p>
 </dd>
 </dl>
 
 <a name="isAttachedToDom"></a>
 
-## isAttachedToDom(node) ⇒ <code>Boolean</code>
-Check for the node being inside the DOM
+## isAttachedToDom(node) ⇒ <code>boolean</code>
+Check node for being part of the DOM
 
 **Kind**: global function  
-**Returns**: <code>Boolean</code> - true when the node is onscreen -- not removed  
+**Returns**: <code>boolean</code> - true when the node is on the webpage  
 
 | Param | Type |
 | --- | --- |
@@ -75,7 +75,7 @@ Round at digits; round with significance
 | Param | Type | Description |
 | --- | --- | --- |
 | origin | <code>number</code> | any number to round |
-| digits | <code>number</code> | number of digits to round at |
+| digits | <code>number</code> | number of significant digits to round at |
 
 <a name="isUsableNumber"></a>
 
@@ -104,7 +104,7 @@ Check for a match covering the string entirely
 <a name="isChar"></a>
 
 ## isChar(char) ⇒ <code>boolean</code>
-Helper Test for being a string with length 1
+Test value for being a character; a string with a length of one
 
 **Kind**: global function  
 **Returns**: <code>boolean</code> - is a single character  
@@ -116,7 +116,7 @@ Helper Test for being a string with length 1
 <a name="isDigit"></a>
 
 ## isDigit(char) ⇒ <code>boolean</code>
-Test for being a string representation of a digit
+Test value for being a string representation of a digit
 
 **Kind**: global function  
 **Returns**: <code>boolean</code> - is a number 0-9  
@@ -128,7 +128,7 @@ Test for being a string representation of a digit
 <a name="isLetter"></a>
 
 ## isLetter(char) ⇒ <code>boolean</code>
-Test for being a letter
+Test value for being a letter
 
 **Kind**: global function  
 **Returns**: <code>boolean</code> - char is a letter  
@@ -140,7 +140,7 @@ Test for being a letter
 <a name="isLower"></a>
 
 ## isLower(char) ⇒ <code>boolean</code>
-Test for being a lowercase letter
+Test value for being a lowercase letter
 
 **Kind**: global function  
 **Returns**: <code>boolean</code> - char is a lower-case letter  
@@ -152,7 +152,7 @@ Test for being a lowercase letter
 <a name="isUpper"></a>
 
 ## isUpper(char) ⇒ <code>boolean</code>
-Test for being an uppercase letter
+Test value for being an uppercase letter
 
 **Kind**: global function  
 **Returns**: <code>boolean</code> - char is a upper-case letter  
@@ -163,7 +163,7 @@ Test for being an uppercase letter
 
 <a name="isAlphaNumeric"></a>
 
-## isAlphaNumeric(line) ⇒ <code>boolean</code>
+## isAlphaNumeric(word) ⇒ <code>boolean</code>
 Test for being a string consisting of letters and/or digits
 
 **Kind**: global function  
@@ -171,12 +171,12 @@ Test for being a string consisting of letters and/or digits
 
 | Param | Type |
 | --- | --- |
-| line | <code>string</code> | 
+| word | <code>string</code> | 
 
 <a name="isPrimitive"></a>
 
 ## isPrimitive(value) ⇒ <code>boolean</code>
-Check for primitives
+Check value for being a primitive
 
 **Kind**: global function  
 **Returns**: <code>boolean</code> - is a primitive  

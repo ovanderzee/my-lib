@@ -13,7 +13,7 @@ import { isPrimitive } from './type/isPrimitive.js'
 import { isAttachedToDom } from './dom/isAttachedToDom'
 
 /**
- * Bundle as-is
+ * Bundle alphabetically
  */
 export {
     isAlphaNumeric,

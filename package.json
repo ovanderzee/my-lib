@@ -1,7 +1,7 @@
 {
   "name": "my-lib",
   "version": "1.2.0",
-  "description": "library of recurring unconnected functions",
+  "description": "library of recurring, unconnected functions",
   "main": "dist/myLib.js",
   "module": "module/myLib.js",
   "scripts": {

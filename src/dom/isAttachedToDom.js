@@ -1,7 +1,7 @@
 /**
- * Check for the node being inside the DOM
+ * Check node for being part of the DOM
  * @param {Node} node
- * @returns {Boolean} true when the node is onscreen -- not removed
+ * @returns {boolean} true when the node is on the webpage
  */
 const isAttachedToDom = function (elm) {
     return (

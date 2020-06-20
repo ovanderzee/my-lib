@@ -1,5 +1,5 @@
 /**
- * Helper Test for being a string with length 1
+ * Test value for being a character; a string with a length of one
  * @param {string} char
  * @returns {boolean} is a single character
  */
@@ -8,7 +8,7 @@ const isChar = (char) => {
 }
 
 /**
- * Test for being a string representation of a digit
+ * Test value for being a string representation of a digit
  * @param {string} char
  * @returns {boolean} is a number 0-9
  */
@@ -17,7 +17,7 @@ const isDigit = (char) => {
 }
 
 /**
- * Test for being a letter
+ * Test value for being a letter
  * @param {string} char
  * @returns {boolean} char is a letter
  */
@@ -26,7 +26,7 @@ const isLetter = (char) => {
 }
 
 /**
- * Test for being a lowercase letter
+ * Test value for being a lowercase letter
  * @param {string} char
  * @returns {boolean} char is a lower-case letter
  */
@@ -39,7 +39,7 @@ const isLower = (char) => {
 }
 
 /**
- * Test for being an uppercase letter
+ * Test value for being an uppercase letter
  * @param {string} char
  * @returns {boolean} char is a upper-case letter
  */
