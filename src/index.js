@@ -11,11 +11,13 @@ import { isExactMatch } from './regex/isExactMatch'
 import { roundAtDecimals, roundAtDigits } from './math/round'
 import { isPrimitive } from './type/isPrimitive.js'
 import { isAttachedToDom } from './dom/isAttachedToDom'
+import { greet } from './console/greet'
 
 /**
  * Bundle alphabetically
  */
 export {
+    greet,
     isAlphaNumeric,
     isAttachedToDom,
     isExactMatch,

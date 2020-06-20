@@ -1,6 +1,9 @@
 ## Functions
 
 <dl>
+<dt><a href="#greet">greet()</a> ⇒ <code>void</code></dt>
+<dd><p>The sake of package</p>
+</dd>
 <dt><a href="#isAttachedToDom">isAttachedToDom(node)</a> ⇒ <code>boolean</code></dt>
 <dd><p>Check node for being part of the DOM</p>
 </dd>
@@ -39,6 +42,13 @@
 </dd>
 </dl>
 
+<a name="greet"></a>
+
+## greet() ⇒ <code>void</code>
+The sake of package
+
+**Kind**: global function  
+**Returns**: <code>void</code> - log the console  
 <a name="isAttachedToDom"></a>
 
 ## isAttachedToDom(node) ⇒ <code>boolean</code>
