@@ -1,8 +1,14 @@
 ## Functions
 
 <dl>
+<dt><a href="#arrayIntersection">arrayIntersection(array1, array2)</a> ⇒ <code>Array</code></dt>
+<dd><p>Find the intersection of two arrays</p>
+</dd>
 <dt><a href="#greet">greet()</a> ⇒ <code>void</code></dt>
 <dd><p>The sake of package</p>
+</dd>
+<dt><a href="#arrayFromQuery">arrayFromQuery(cssQuery;)</a> ⇒ <code>Array.&lt;Node&gt;</code></dt>
+<dd><p>Create a genuine array from a css-query</p>
 </dd>
 <dt><a href="#isAttachedToDom">isAttachedToDom(node)</a> ⇒ <code>boolean</code></dt>
 <dd><p>Check node for being part of the DOM</p>
@@ -13,11 +19,17 @@
 <dt><a href="#roundAtDigits">roundAtDigits(origin, digits)</a> ⇒ <code>number</code></dt>
 <dd><p>Round at digits; round with significance</p>
 </dd>
+<dt><a href="#isEqualSigns">isEqualSigns(numeric)</a> ⇒ <code>boolean</code></dt>
+<dd><p>Check all arguments for being a number with the same sign</p>
+</dd>
 <dt><a href="#isUsableNumber">isUsableNumber(anonymus)</a> ⇒ <code>boolean</code></dt>
 <dd><p>Test for values with which calculations can be done</p>
 </dd>
 <dt><a href="#isExactMatch">isExactMatch(word, regex)</a> ⇒ <code>boolean</code></dt>
 <dd><p>Check for a match covering the string entirely</p>
+</dd>
+<dt><a href="#arrayFromCommaSeparatedList">arrayFromCommaSeparatedList(commaSeperatedList)</a> ⇒ <code>Array.&lt;string&gt;</code></dt>
+<dd><p>Process comma separated list to a sanitised array with normalised strings</p>
 </dd>
 <dt><a href="#isChar">isChar(char)</a> ⇒ <code>boolean</code></dt>
 <dd><p>Test value for being a character; a string with a length of one</p>
@@ -42,6 +54,18 @@
 </dd>
 </dl>
 
+<a name="arrayIntersection"></a>
+
+## arrayIntersection(array1, array2) ⇒ <code>Array</code>
+Find the intersection of two arrays
+
+**Kind**: global function  
+
+| Param | Type |
+| --- | --- |
+| array1 | <code>Array</code> | 
+| array2 | <code>Array</code> | 
+
 <a name="greet"></a>
 
 ## greet() ⇒ <code>void</code>
@@ -49,6 +73,18 @@ The sake of package
 
 **Kind**: global function  
 **Returns**: <code>void</code> - log the console  
+<a name="arrayFromQuery"></a>
+
+## arrayFromQuery(cssQuery;) ⇒ <code>Array.&lt;Node&gt;</code>
+Create a genuine array from a css-query
+
+**Kind**: global function  
+**Returns**: <code>Array.&lt;Node&gt;</code> - array with HTMLElements  
+
+| Param | Type |
+| --- | --- |
+| cssQuery; | <code>string</code> | 
+
 <a name="isAttachedToDom"></a>
 
 ## isAttachedToDom(node) ⇒ <code>boolean</code>
@@ -87,6 +123,18 @@ Round at digits; round with significance
 | origin | <code>number</code> | any number to round |
 | digits | <code>number</code> | number of significant digits to round at |
 
+<a name="isEqualSigns"></a>
+
+## isEqualSigns(numeric) ⇒ <code>boolean</code>
+Check all arguments for being a number with the same sign
+
+**Kind**: global function  
+**Returns**: <code>boolean</code> - equality  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| numeric | <code>Arguments</code> | arguments |
+
 <a name="isUsableNumber"></a>
 
 ## isUsableNumber(anonymus) ⇒ <code>boolean</code>
@@ -110,6 +158,18 @@ Check for a match covering the string entirely
 | --- | --- |
 | word | <code>string</code> | 
 | regex | <code>RegExp</code> | 
+
+<a name="arrayFromCommaSeparatedList"></a>
+
+## arrayFromCommaSeparatedList(commaSeperatedList) ⇒ <code>Array.&lt;string&gt;</code>
+Process comma separated list to a sanitised array with normalised strings
+
+**Kind**: global function  
+**Returns**: <code>Array.&lt;string&gt;</code> - array with separate strings  
+
+| Param | Type |
+| --- | --- |
+| commaSeperatedList | <code>string</code> | 
 
 <a name="isChar"></a>
 
