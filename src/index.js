@@ -16,6 +16,7 @@ import { arrayIntersection } from './array/arrayIntersection.js'
 import { arrayFromQuery } from './dom/arrayFromQuery.js'
 import { isEqualSigns } from './number/isEqualSigns.js'
 import { arrayFromCommaSeparatedList } from './string/arrayFromCommaSeparatedList.js'
+import { hasOwnProperty } from './object/hasOwnProperty.js'
 
 /**
  * Bundle alphabetically
@@ -25,6 +26,7 @@ export {
     arrayFromCommaSeparatedList,
     arrayFromQuery,
     arrayIntersection,
+    hasOwnProperty,
     isAlphaNumeric,
     isAttachedToDom,
     isEqualSigns,

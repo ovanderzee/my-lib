@@ -25,6 +25,9 @@
 <dt><a href="#isUsableNumber">isUsableNumber(anonymus)</a> ⇒ <code>boolean</code></dt>
 <dd><p>Test for values with which calculations can be done</p>
 </dd>
+<dt><a href="#hasOwnProperty">hasOwnProperty(object, prop)</a> ⇒ <code>Boolean</code></dt>
+<dd><p>Check for existence of property in object</p>
+</dd>
 <dt><a href="#isExactMatch">isExactMatch(word, regex)</a> ⇒ <code>boolean</code></dt>
 <dd><p>Check for a match covering the string entirely</p>
 </dd>
@@ -146,6 +149,19 @@ Test for values with which calculations can be done
 | Param | Type | Description |
 | --- | --- | --- |
 | anonymus | <code>Arguments</code> | one or more values to test |
+
+<a name="hasOwnProperty"></a>
+
+## hasOwnProperty(object, prop) ⇒ <code>Boolean</code>
+Check for existence of property in object
+
+**Kind**: global function  
+**Returns**: <code>Boolean</code> - hasIt - object has that own property  
+
+| Param | Type |
+| --- | --- |
+| object | <code>Object</code> | 
+| prop | <code>String</code> | 
 
 <a name="isExactMatch"></a>
 
