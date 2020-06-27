@@ -2,7 +2,7 @@
  * Check for a match covering the string entirely
  * @param {string} word
  * @param {RegExp} regex
- * @returns {boolean}
+ * @returns {boolean} all characters of the word were described in regex
  */
 const isExactMatch = (word, regex) => {
     const match = word.match(regex)

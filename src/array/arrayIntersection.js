@@ -1,8 +1,8 @@
 /**
- * Find the intersection of two arrays
+ * Find all values appearing in both arrays
  * @param {Array} array1
  * @param {Array} array2
- * @return {Array}
+ * @return {Array} the intersection
  */
 const arrayIntersection = function (array1, array2) {
     let lookup = {}

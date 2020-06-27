@@ -1,6 +1,5 @@
 /**
- * The sake of package
- * @returns {void} log the console
+ * The sake of package; log the console
  */
 const greet = () => {
     // The epic proof of getting through

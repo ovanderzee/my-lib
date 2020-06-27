@@ -2,12 +2,12 @@
 
 <dl>
 <dt><a href="#arrayIntersection">arrayIntersection(array1, array2)</a> ⇒ <code>Array</code></dt>
-<dd><p>Find the intersection of two arrays</p>
+<dd><p>Find all values appearing in both arrays</p>
 </dd>
-<dt><a href="#greet">greet()</a> ⇒ <code>void</code></dt>
-<dd><p>The sake of package</p>
+<dt><a href="#greet">greet()</a></dt>
+<dd><p>The sake of package; log the console</p>
 </dd>
-<dt><a href="#arrayFromQuery">arrayFromQuery(cssQuery;)</a> ⇒ <code>Array.&lt;Node&gt;</code></dt>
+<dt><a href="#arrayFromQuery">arrayFromQuery(cssQuery)</a> ⇒ <code>Array.&lt;Node&gt;</code></dt>
 <dd><p>Create a genuine array from a css-query</p>
 </dd>
 <dt><a href="#isAttachedToDom">isAttachedToDom(node)</a> ⇒ <code>boolean</code></dt>
@@ -19,13 +19,13 @@
 <dt><a href="#roundAtDigits">roundAtDigits(origin, digits)</a> ⇒ <code>number</code></dt>
 <dd><p>Round at digits; round with significance</p>
 </dd>
-<dt><a href="#isEqualSigns">isEqualSigns(numeric)</a> ⇒ <code>boolean</code></dt>
+<dt><a href="#isEqualSigns">isEqualSigns(anonymus)</a> ⇒ <code>boolean</code></dt>
 <dd><p>Check all arguments for being a number with the same sign</p>
 </dd>
 <dt><a href="#isUsableNumber">isUsableNumber(anonymus)</a> ⇒ <code>boolean</code></dt>
 <dd><p>Test for values with which calculations can be done</p>
 </dd>
-<dt><a href="#hasOwnProperty">hasOwnProperty(object, prop)</a> ⇒ <code>Boolean</code></dt>
+<dt><a href="#hasOwnProperty">hasOwnProperty(object, prop)</a> ⇒ <code>boolean</code></dt>
 <dd><p>Check for existence of property in object</p>
 </dd>
 <dt><a href="#isExactMatch">isExactMatch(word, regex)</a> ⇒ <code>boolean</code></dt>
@@ -60,9 +60,10 @@
 <a name="arrayIntersection"></a>
 
 ## arrayIntersection(array1, array2) ⇒ <code>Array</code>
-Find the intersection of two arrays
+Find all values appearing in both arrays
 
 **Kind**: global function  
+**Returns**: <code>Array</code> - the intersection  
 
 | Param | Type |
 | --- | --- |
@@ -71,14 +72,13 @@ Find the intersection of two arrays
 
 <a name="greet"></a>
 
-## greet() ⇒ <code>void</code>
-The sake of package
+## greet()
+The sake of package; log the console
 
 **Kind**: global function  
-**Returns**: <code>void</code> - log the console  
 <a name="arrayFromQuery"></a>
 
-## arrayFromQuery(cssQuery;) ⇒ <code>Array.&lt;Node&gt;</code>
+## arrayFromQuery(cssQuery) ⇒ <code>Array.&lt;Node&gt;</code>
 Create a genuine array from a css-query
 
 **Kind**: global function  
@@ -86,7 +86,7 @@ Create a genuine array from a css-query
 
 | Param | Type |
 | --- | --- |
-| cssQuery; | <code>string</code> | 
+| cssQuery | <code>string</code> | 
 
 <a name="isAttachedToDom"></a>
 
@@ -128,7 +128,7 @@ Round at digits; round with significance
 
 <a name="isEqualSigns"></a>
 
-## isEqualSigns(numeric) ⇒ <code>boolean</code>
+## isEqualSigns(anonymus) ⇒ <code>boolean</code>
 Check all arguments for being a number with the same sign
 
 **Kind**: global function  
@@ -136,7 +136,7 @@ Check all arguments for being a number with the same sign
 
 | Param | Type | Description |
 | --- | --- | --- |
-| numeric | <code>Arguments</code> | arguments |
+| anonymus | <code>Arguments</code> | numeric arguments |
 
 <a name="isUsableNumber"></a>
 
@@ -152,16 +152,16 @@ Test for values with which calculations can be done
 
 <a name="hasOwnProperty"></a>
 
-## hasOwnProperty(object, prop) ⇒ <code>Boolean</code>
+## hasOwnProperty(object, prop) ⇒ <code>boolean</code>
 Check for existence of property in object
 
 **Kind**: global function  
-**Returns**: <code>Boolean</code> - hasIt - object has that own property  
+**Returns**: <code>boolean</code> - the object has the property as its own property -- not inheriting it  
 
 | Param | Type |
 | --- | --- |
-| object | <code>Object</code> | 
-| prop | <code>String</code> | 
+| object | <code>object</code> | 
+| prop | <code>string</code> | 
 
 <a name="isExactMatch"></a>
 
@@ -169,6 +169,7 @@ Check for existence of property in object
 Check for a match covering the string entirely
 
 **Kind**: global function  
+**Returns**: <code>boolean</code> - all characters of the word were described in regex  
 
 | Param | Type |
 | --- | --- |

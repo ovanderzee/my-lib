@@ -1,6 +1,6 @@
 /**
  * Create a genuine array from a css-query
- * @param {string} cssQuery;
+ * @param {string} cssQuery
  * @returns {Node[]} array with HTMLElements
  */
 const arrayFromQuery = function (cssQuery) {

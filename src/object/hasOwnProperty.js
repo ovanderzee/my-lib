@@ -1,8 +1,8 @@
 /**
  * Check for existence of property in object
- * @param {Object} object
- * @param {String} prop
- * @returns {Boolean} hasIt - object has that own property
+ * @param {object} object
+ * @param {string} prop
+ * @returns {boolean} the object has the property as its own property -- not inheriting it
  */
 const hasOwnProperty = function (object, prop) {
     const hasIt = Object.prototype.hasOwnProperty.call(object, prop)

@@ -14,6 +14,7 @@ describe('In isExactMatch the match covers the entire string', () => {
         const word = 'partly'
         const regex = /part/
 
+        expect(word.match(regex)).toBeTruthy()
         expect(isExactMatch(word, regex)).toBeFalsy()
     })
 })
