@@ -22,7 +22,7 @@ import { isAlphaNumeric } from 'my-lib'
 import * as myLib from 'my-lib'
 ```
 
-## Contents
+[//]: # (Contents)
 
 #include "md/API.md"
 
