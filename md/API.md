@@ -124,7 +124,7 @@ Calculate sum of array with Numbers
 Calculate average of array with Numbers
 
 **Kind**: global function  
-**Returns**: <code>number</code> - average sum of the numbers  
+**Returns**: <code>number</code> - the average of the numbers  
 
 | Param | Type | Description |
 | --- | --- | --- |
