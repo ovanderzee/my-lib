@@ -13,6 +13,12 @@
 <dt><a href="#isAttachedToDom">isAttachedToDom(node)</a> ⇒ <code>boolean</code></dt>
 <dd><p>Check node for being part of the DOM</p>
 </dd>
+<dt><a href="#mathSum">mathSum(seq)</a> ⇒ <code>number</code></dt>
+<dd><p>Calculate sum of array with Numbers</p>
+</dd>
+<dt><a href="#mathAvg">mathAvg(seq)</a> ⇒ <code>number</code></dt>
+<dd><p>Calculate average of array with Numbers</p>
+</dd>
 <dt><a href="#roundAtDecimals">roundAtDecimals(origin, decimals)</a> ⇒ <code>number</code></dt>
 <dd><p>Round at decimals</p>
 </dd>
@@ -99,6 +105,30 @@ Check node for being part of the DOM
 | Param | Type |
 | --- | --- |
 | node | <code>Node</code> | 
+
+<a name="mathSum"></a>
+
+## mathSum(seq) ⇒ <code>number</code>
+Calculate sum of array with Numbers
+
+**Kind**: global function  
+**Returns**: <code>number</code> - the sum of the numbers  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| seq | <code>Array.&lt;number&gt;</code> | array containing numbers |
+
+<a name="mathAvg"></a>
+
+## mathAvg(seq) ⇒ <code>number</code>
+Calculate average of array with Numbers
+
+**Kind**: global function  
+**Returns**: <code>number</code> - average sum of the numbers  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| seq | <code>Array.&lt;number&gt;</code> | array containing numbers |
 
 <a name="roundAtDecimals"></a>
 

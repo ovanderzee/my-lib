@@ -17,6 +17,7 @@ import { arrayFromQuery } from './dom/arrayFromQuery.js'
 import { isEqualSigns } from './number/isEqualSigns.js'
 import { arrayFromCommaSeparatedList } from './string/arrayFromCommaSeparatedList.js'
 import { hasOwnProperty } from './object/hasOwnProperty.js'
+import { mathSum, mathAvg } from './math/groupProperties'
 
 /**
  * Bundle alphabetically
@@ -38,6 +39,8 @@ export {
     isPrimitive,
     isUpper,
     isUsableNumber,
+    mathSum,
+    mathAvg,
     roundAtDecimals,
     roundAtDigits,
 }
