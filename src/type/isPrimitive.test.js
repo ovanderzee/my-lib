@@ -1,34 +1,72 @@
+import { hasOwnProperty } from '../object/hasOwnProperty.js'
 import { isPrimitive } from './isPrimitive.js'
 
 const testObject = {
-    aBoolean: true,
-    aString: 'yep',
-    aNaN: NaN,
-    aNull: null,
-    aNumber: 3.14,
-    anUndefined: undefined,
-    anArray: [1, 2, 3],
-    anObject: { a: 1, b: 'b' },
-    aFunction: () => {},
-    aDate: new Date(),
-    aDateString: Date(),
-    aSyombol: Symbol('alpha'),
+    valueUndefined: undefined,
+    valueNull: null,
+    booleanFalse: false,
+    booleanTrue: true,
+    numericNaN: NaN,
+    numericInfinity: Infinity,
+    numericZero: 0,
+    numericBinary: 0b1,
+    numericOctal: 0o7,
+    numericDecimal: 3.14159,
+    numericHexadecimal: 0xf,
+    stringNone: '',
+    stringLengthy: '\'O sole mio',
+    arrayEmpty: [],
+    arrayLengthy: [1, 2, 3],
+    objectEmpty: {},
+    objectTrivial: {
+        a: null,
+        b: undefined,
+    },
+    objectRelevant: {
+        a: 1,
+        b: 'b',
+    },
+    functionNoop: () => {},
+    dateToday: new Date(),
+    dateTodayString: Date(),
+    symbolAlpha: Symbol('alpha'),
+}
+
+/**
+ * Return true or false for a primitives or not for a non-primitive
+ * Return name string for property unknown to the testObject
+ * @param {string} item of testObject
+ * @returns {boolean | string}
+ */ 
+const isBool4PrimitiveOrNot = item => {
+    if (!hasOwnProperty(testObject, item)) return item
+    return isPrimitive(testObject[item])
 }
 
 test('isPrimitive accepts primitives', () => {
-    expect(isPrimitive(testObject.aBoolean)).toBe(true)
-    expect(isPrimitive(testObject.aString)).toBe(true)
-    expect(isPrimitive(testObject.aNaN)).toBe(true)
-    expect(isPrimitive(testObject.aNumber)).toBe(true)
-    expect(isPrimitive(testObject.aDateString)).toBe(true)
+    expect(isBool4PrimitiveOrNot('booleanTrue')).toBe(true)
+    expect(isBool4PrimitiveOrNot('booleanFalse')).toBe(true)
+    expect(isBool4PrimitiveOrNot('numericNaN')).toBe(true)
+    expect(isBool4PrimitiveOrNot('numericInfinity')).toBe(true)
+    expect(isBool4PrimitiveOrNot('numericZero')).toBe(true)
+    expect(isBool4PrimitiveOrNot('numericBinary')).toBe(true)
+    expect(isBool4PrimitiveOrNot('numericOctal')).toBe(true)
+    expect(isBool4PrimitiveOrNot('numericDecimal')).toBe(true)
+    expect(isBool4PrimitiveOrNot('numericHexadecimal')).toBe(true)
+    expect(isBool4PrimitiveOrNot('stringNone')).toBe(true)
+    expect(isBool4PrimitiveOrNot('stringLengthy')).toBe(true)
+    expect(isBool4PrimitiveOrNot('dateTodayString')).toBe(true)
 })
 
 test('isPrimitive rejects non-primitives', () => {
-    expect(isPrimitive(testObject.aNull)).toBe(false)
-    expect(isPrimitive(testObject.anUndefined)).toBe(false)
-    expect(isPrimitive(testObject.anArray)).toBe(false)
-    expect(isPrimitive(testObject.anObject)).toBe(false)
-    expect(isPrimitive(testObject.aFunction)).toBe(false)
-    expect(isPrimitive(testObject.aDate)).toBe(false)
-    expect(isPrimitive(testObject.aSyombol)).toBe(false)
+    expect(isBool4PrimitiveOrNot('valueNull')).toBe(false)
+    expect(isBool4PrimitiveOrNot('valueUndefined')).toBe(false)
+    expect(isBool4PrimitiveOrNot('arrayEmpty')).toBe(false)
+    expect(isBool4PrimitiveOrNot('arrayLengthy')).toBe(false)
+    expect(isBool4PrimitiveOrNot('objectEmpty')).toBe(false)
+    expect(isBool4PrimitiveOrNot('objectTrivial')).toBe(false)
+    expect(isBool4PrimitiveOrNot('objectRelevant')).toBe(false)
+    expect(isBool4PrimitiveOrNot('functionNoop')).toBe(false)
+    expect(isBool4PrimitiveOrNot('dateToday')).toBe(false)
+    expect(isBool4PrimitiveOrNot('symbolAlpha')).toBe(false)
 })
