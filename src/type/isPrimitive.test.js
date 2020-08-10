@@ -14,7 +14,7 @@ const testObject = {
     numericDecimal: 3.14159,
     numericHexadecimal: 0xf,
     stringNone: '',
-    stringLengthy: '\'O sole mio',
+    stringLengthy: "'O sole mio",
     arrayEmpty: [],
     arrayLengthy: [1, 2, 3],
     objectEmpty: {},
@@ -35,10 +35,12 @@ const testObject = {
 /**
  * Return true or false for a primitives or not for a non-primitive
  * Return name string for property unknown to the testObject
+ * @private
  * @param {string} item of testObject
  * @returns {boolean | string}
- */ 
-const isBool4PrimitiveOrNot = item => {
+ */
+
+const isBool4PrimitiveOrNot = (item) => {
     if (!hasOwnProperty(testObject, item)) return item
     return isPrimitive(testObject[item])
 }
