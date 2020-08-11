@@ -48,6 +48,9 @@ import * as myLib from 'my-lib'
 <dt><a href="#roundAtDecimals">roundAtDecimals(origin, decimals)</a> ⇒ <code>number</code></dt>
 <dd><p>Round at decimals</p>
 </dd>
+<dt><a href="#roundAtDigitsExponent">roundAtDigitsExponent(origin, digits)</a> ⇒ <code>string</code></dt>
+<dd><p>Round at digits to exponential notation; round with significance</p>
+</dd>
 <dt><a href="#roundAtDigits">roundAtDigits(origin, digits)</a> ⇒ <code>number</code></dt>
 <dd><p>Round at digits; round with significance</p>
 </dd>
@@ -168,6 +171,19 @@ Round at decimals
 | --- | --- | --- |
 | origin | <code>number</code> | any number to round |
 | decimals | <code>number</code> | number of decimals to round at |
+
+<a name="roundAtDigitsExponent"></a>
+
+## roundAtDigitsExponent(origin, digits) ⇒ <code>string</code>
+Round at digits to exponential notation; round with significance
+
+**Kind**: global function  
+**Returns**: <code>string</code> - the rounded number as exponent  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| origin | <code>number</code> | any number to round |
+| digits | <code>number</code> | number of significant digits to round at |
 
 <a name="roundAtDigits"></a>
 
