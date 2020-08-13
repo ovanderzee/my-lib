@@ -1,5 +1,5 @@
-[![Build Status](https://travis-ci.com/ovanderzee/my-lib.svg?branch=master)](https://travis-ci.com/ovanderzee/my-lib)
-[![Coverage Status](https://coveralls.io/repos/github/ovanderzee/transform-case/badge.svg?branch=master)](https://coveralls.io/github/ovanderzee/transform-case?branch=master)
+[![Build Status](https://travis-ci.org/ovanderzee/my-lib.svg?branch=master)](https://travis-ci.org/ovanderzee/my-lib)
+[![Coverage Status](https://coveralls.io/repos/github/ovanderzee/my-lib/badge.svg?branch=master)](https://coveralls.io/github/ovanderzee/my-lib?branch=master)
 
 # my-lib
 
