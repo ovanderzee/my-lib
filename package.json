@@ -38,6 +38,7 @@
     "@rollup/plugin-commonjs": "^13.0.0",
     "@rollup/plugin-node-resolve": "^8.0.1",
     "clear-folder": "^2.0.0",
+    "coveralls": "^3.1.0",
     "eslint": "^7.2.0",
     "eslint-plugin-jasmine": "^4.1.1",
     "eslint-plugin-jest": "^23.13.2",
