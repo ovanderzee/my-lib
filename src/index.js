@@ -18,6 +18,8 @@ import { isEqualSigns } from './number/isEqualSigns.js'
 import { arrayFromCommaSeparatedList } from './string/arrayFromCommaSeparatedList.js'
 import { hasOwnProperty } from './object/hasOwnProperty.js'
 import { mathSum, mathAvg } from './math/groupProperties'
+import { isIndivisible } from './type/isIndivisible.js'
+import { deepClone } from './object/deepClone.js'
 
 /**
  * Bundle alphabetically
@@ -27,8 +29,10 @@ export {
     arrayFromCommaSeparatedList,
     arrayFromQuery,
     arrayIntersection,
+    deepClone,
     hasOwnProperty,
     isAlphaNumeric,
+    isIndivisible,
     isAttachedToDom,
     isEqualSigns,
     isExactMatch,

@@ -1,5 +1,4 @@
-[![Build Status](https://travis-ci.org/ovanderzee/my-lib.svg?branch=master)](https://travis-ci.org/ovanderzee/my-lib)
-[![Coverage Status](https://coveralls.io/repos/github/ovanderzee/my-lib/badge.svg?branch=master)](https://coveralls.io/github/ovanderzee/my-lib?branch=master)
+
 
 # my-lib
 
@@ -61,6 +60,10 @@ import * as myLib from 'my-lib'
 <dt><a href="#isUsableNumber">isUsableNumber(anonymus)</a> ⇒ <code>boolean</code></dt>
 <dd><p>Test for values with which calculations can be done</p>
 </dd>
+<dt><a href="#deepClone">deepClone(variable)</a> ⇒ <code>any</code></dt>
+<dd><p>Recursively copy all indivisible data to new object
+Pay attention to Date and RegExp objects</p>
+</dd>
 <dt><a href="#hasOwnProperty">hasOwnProperty(object, prop)</a> ⇒ <code>boolean</code></dt>
 <dd><p>Check for existence of property in object</p>
 </dd>
@@ -88,8 +91,12 @@ import * as myLib from 'my-lib'
 <dt><a href="#isAlphaNumeric">isAlphaNumeric(word)</a> ⇒ <code>boolean</code></dt>
 <dd><p>Test for being a string consisting of letters and/or digits</p>
 </dd>
+<dt><a href="#isIndivisible">isIndivisible(value)</a> ⇒ <code>boolean</code></dt>
+<dd><p>Test for type indivisibility</p>
+</dd>
 <dt><a href="#isPrimitive">isPrimitive(value)</a> ⇒ <code>boolean</code></dt>
-<dd><p>Check value for being a primitive</p>
+<dd><p>Check value for being a primitive
+but leave out the anti-value undefined;</p>
 </dd>
 </dl>
 
@@ -103,8 +110,8 @@ Find all values appearing in both arrays
 
 | Param | Type |
 | --- | --- |
-| array1 | <code>Array</code> |
-| array2 | <code>Array</code> |
+| array1 | <code>Array</code> | 
+| array2 | <code>Array</code> | 
 
 <a name="greet"></a>
 
@@ -122,7 +129,7 @@ Create a genuine array from a css-query
 
 | Param | Type |
 | --- | --- |
-| cssQuery | <code>string</code> |
+| cssQuery | <code>string</code> | 
 
 <a name="isAttachedToDom"></a>
 
@@ -134,7 +141,7 @@ Check node for being part of the DOM
 
 | Param | Type |
 | --- | --- |
-| node | <code>Node</code> |
+| node | <code>Node</code> | 
 
 <a name="mathSum"></a>
 
@@ -223,6 +230,19 @@ Test for values with which calculations can be done
 | --- | --- | --- |
 | anonymus | <code>Arguments</code> | one or more values to test |
 
+<a name="deepClone"></a>
+
+## deepClone(variable) ⇒ <code>any</code>
+Recursively copy all indivisible data to new object
+Pay attention to Date and RegExp objects
+
+**Kind**: global function  
+**Returns**: <code>any</code> - the same data with different references  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| variable | <code>any</code> | any value to check |
+
 <a name="hasOwnProperty"></a>
 
 ## hasOwnProperty(object, prop) ⇒ <code>boolean</code>
@@ -233,8 +253,8 @@ Check for existence of property in object
 
 | Param | Type |
 | --- | --- |
-| object | <code>object</code> |
-| prop | <code>string</code> |
+| object | <code>object</code> | 
+| prop | <code>string</code> | 
 
 <a name="isExactMatch"></a>
 
@@ -246,8 +266,8 @@ Check for a match covering the string entirely
 
 | Param | Type |
 | --- | --- |
-| word | <code>string</code> |
-| regex | <code>RegExp</code> |
+| word | <code>string</code> | 
+| regex | <code>RegExp</code> | 
 
 <a name="arrayFromCommaSeparatedList"></a>
 
@@ -259,7 +279,7 @@ Process comma separated list to a sanitised array with normalised strings
 
 | Param | Type |
 | --- | --- |
-| commaSeperatedList | <code>string</code> |
+| commaSeperatedList | <code>string</code> | 
 
 <a name="isChar"></a>
 
@@ -271,7 +291,7 @@ Test value for being a character; a string with a length of one
 
 | Param | Type |
 | --- | --- |
-| char | <code>string</code> |
+| char | <code>string</code> | 
 
 <a name="isDigit"></a>
 
@@ -283,7 +303,7 @@ Test value for being a string representation of a digit
 
 | Param | Type |
 | --- | --- |
-| char | <code>string</code> |
+| char | <code>string</code> | 
 
 <a name="isLetter"></a>
 
@@ -295,7 +315,7 @@ Test value for being a letter
 
 | Param | Type |
 | --- | --- |
-| char | <code>string</code> |
+| char | <code>string</code> | 
 
 <a name="isLower"></a>
 
@@ -307,7 +327,7 @@ Test value for being a lowercase letter
 
 | Param | Type |
 | --- | --- |
-| char | <code>string</code> |
+| char | <code>string</code> | 
 
 <a name="isUpper"></a>
 
@@ -319,7 +339,7 @@ Test value for being an uppercase letter
 
 | Param | Type |
 | --- | --- |
-| char | <code>string</code> |
+| char | <code>string</code> | 
 
 <a name="isAlphaNumeric"></a>
 
@@ -331,12 +351,25 @@ Test for being a string consisting of letters and/or digits
 
 | Param | Type |
 | --- | --- |
-| word | <code>string</code> |
+| word | <code>string</code> | 
+
+<a name="isIndivisible"></a>
+
+## isIndivisible(value) ⇒ <code>boolean</code>
+Test for type indivisibility
+
+**Kind**: global function  
+**Returns**: <code>boolean</code> - every argument is a useable number  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| value | <code>any</code> | value to test |
 
 <a name="isPrimitive"></a>
 
 ## isPrimitive(value) ⇒ <code>boolean</code>
 Check value for being a primitive
+but leave out the anti-value undefined;
 
 **Kind**: global function  
 **Returns**: <code>boolean</code> - is a primitive  

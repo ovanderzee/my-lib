@@ -34,6 +34,10 @@
 <dt><a href="#isUsableNumber">isUsableNumber(anonymus)</a> ⇒ <code>boolean</code></dt>
 <dd><p>Test for values with which calculations can be done</p>
 </dd>
+<dt><a href="#deepClone">deepClone(variable)</a> ⇒ <code>any</code></dt>
+<dd><p>Recursively copy all indivisible data to new object
+Pay attention to Date and RegExp objects</p>
+</dd>
 <dt><a href="#hasOwnProperty">hasOwnProperty(object, prop)</a> ⇒ <code>boolean</code></dt>
 <dd><p>Check for existence of property in object</p>
 </dd>
@@ -61,8 +65,12 @@
 <dt><a href="#isAlphaNumeric">isAlphaNumeric(word)</a> ⇒ <code>boolean</code></dt>
 <dd><p>Test for being a string consisting of letters and/or digits</p>
 </dd>
+<dt><a href="#isIndivisible">isIndivisible(value)</a> ⇒ <code>boolean</code></dt>
+<dd><p>Test for type indivisibility</p>
+</dd>
 <dt><a href="#isPrimitive">isPrimitive(value)</a> ⇒ <code>boolean</code></dt>
-<dd><p>Check value for being a primitive</p>
+<dd><p>Check value for being a primitive
+but leave out the anti-value undefined;</p>
 </dd>
 </dl>
 
@@ -196,6 +204,19 @@ Test for values with which calculations can be done
 | --- | --- | --- |
 | anonymus | <code>Arguments</code> | one or more values to test |
 
+<a name="deepClone"></a>
+
+## deepClone(variable) ⇒ <code>any</code>
+Recursively copy all indivisible data to new object
+Pay attention to Date and RegExp objects
+
+**Kind**: global function  
+**Returns**: <code>any</code> - the same data with different references  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| variable | <code>any</code> | any value to check |
+
 <a name="hasOwnProperty"></a>
 
 ## hasOwnProperty(object, prop) ⇒ <code>boolean</code>
@@ -306,10 +327,23 @@ Test for being a string consisting of letters and/or digits
 | --- | --- |
 | word | <code>string</code> | 
 
+<a name="isIndivisible"></a>
+
+## isIndivisible(value) ⇒ <code>boolean</code>
+Test for type indivisibility
+
+**Kind**: global function  
+**Returns**: <code>boolean</code> - every argument is a useable number  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| value | <code>any</code> | value to test |
+
 <a name="isPrimitive"></a>
 
 ## isPrimitive(value) ⇒ <code>boolean</code>
 Check value for being a primitive
+but leave out the anti-value undefined;
 
 **Kind**: global function  
 **Returns**: <code>boolean</code> - is a primitive  
