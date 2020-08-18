@@ -66,7 +66,8 @@ Pay attention to Date and RegExp objects</p>
 <dd><p>Test for being a string consisting of letters and/or digits</p>
 </dd>
 <dt><a href="#isIndivisible">isIndivisible(value)</a> ⇒ <code>boolean</code></dt>
-<dd><p>Test for type indivisibility</p>
+<dd><p>Check value for indivisible:
+string, number, boolean, bigint, symbol, undefined, null, function</p>
 </dd>
 <dt><a href="#isPrimitive">isPrimitive(value)</a> ⇒ <code>boolean</code></dt>
 <dd><p>Check value for being a primitive
@@ -330,10 +331,10 @@ Test for being a string consisting of letters and/or digits
 <a name="isIndivisible"></a>
 
 ## isIndivisible(value) ⇒ <code>boolean</code>
-Test for type indivisibility
+Check value for indivisible:
+string, number, boolean, bigint, symbol, undefined, null, function
 
 **Kind**: global function  
-**Returns**: <code>boolean</code> - every argument is a useable number  
 
 | Param | Type | Description |
 | --- | --- | --- |

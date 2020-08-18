@@ -1,9 +1,10 @@
 import { isPrimitive } from './isPrimitive'
 
 /**
- * Test for type indivisibility
+ * Check value for indivisible:
+ * string, number, boolean, bigint, symbol, undefined, null, function
  * @param {any} value - value to test
- * @returns {boolean} every argument is a useable number
+ * @returns {boolean}
  */
 const isIndivisible = function (value) {
     let result = isPrimitive(value)
