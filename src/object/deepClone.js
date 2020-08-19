@@ -1,4 +1,4 @@
-import { isIndivisible } from '../type/isIndivisible.js'
+import { isFundamental } from '../type/isFundamental.js'
 
 /**
  * Recursively copy all indivisible data to new object
@@ -8,7 +8,7 @@ import { isIndivisible } from '../type/isIndivisible.js'
  */
 const deepClone = function (variable) {
     let product = variable
-    if (isIndivisible(variable)) {
+    if (isFundamental(variable)) {
         return variable
     } else if (Array.isArray(variable)) {
         product = []

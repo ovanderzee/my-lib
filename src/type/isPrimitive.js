@@ -1,3 +1,5 @@
+import { isWrappedPrimitive } from './isWrappedPrimitive'
+
 /**
  * Check value for being a primitive
  * but leave out the anti-value undefined;
@@ -5,12 +7,6 @@
  * @returns {boolean} is a primitive
  */
 const isPrimitive = function (value) {
-    const newPrimitive =
-        typeof value === 'object' &&
-        (value instanceof String ||
-            value instanceof Number ||
-            value instanceof Boolean)
-
     const typePrimitive =
         typeof value === 'string' ||
         typeof value === 'number' ||
@@ -18,7 +14,7 @@ const isPrimitive = function (value) {
         typeof value === 'bigint' ||
         typeof value === 'symbol'
 
-    return newPrimitive || typePrimitive
+    return isWrappedPrimitive(value) || typePrimitive
 }
 
 export { isPrimitive }

@@ -18,7 +18,7 @@ import { isEqualSigns } from './number/isEqualSigns.js'
 import { arrayFromCommaSeparatedList } from './string/arrayFromCommaSeparatedList.js'
 import { hasOwnProperty } from './object/hasOwnProperty.js'
 import { mathSum, mathAvg } from './math/groupProperties'
-import { isIndivisible } from './type/isIndivisible.js'
+import { isFundamental } from './type/isFundamental.js'
 import { deepClone } from './object/deepClone.js'
 
 /**
@@ -32,7 +32,7 @@ export {
     deepClone,
     hasOwnProperty,
     isAlphaNumeric,
-    isIndivisible,
+    isFundamental,
     isAttachedToDom,
     isEqualSigns,
     isExactMatch,
