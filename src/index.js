@@ -20,6 +20,7 @@ import { hasOwnProperty } from './object/hasOwnProperty.js'
 import { mathSum, mathAvg } from './math/groupProperties'
 import { isFundamental } from './type/isFundamental.js'
 import { deepClone } from './object/deepClone.js'
+import { elementStorage } from './element/storage.js'
 
 /**
  * Bundle alphabetically
@@ -30,6 +31,7 @@ export {
     arrayFromQuery,
     arrayIntersection,
     deepClone,
+    elementStorage,
     hasOwnProperty,
     isAlphaNumeric,
     isFundamental,
