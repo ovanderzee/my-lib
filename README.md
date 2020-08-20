@@ -127,8 +127,10 @@ Stores any type of data by referance
 
 | Name | Type | Description |
 | --- | --- | --- |
-| set | <code>function</code> | store named data by referance |
-| get | <code>function</code> | retrieve named data by referance |
+| set | <code>function</code> | store named data by referance (HTMLElement, dataName, data) |
+| get | <code>function</code> | retrieve named data by referance (HTMLElement, dataName) |
+| has | <code>function</code> | checks existence named data (HTMLElement, dataName) |
+| delete | <code>function</code> | deletes named data (HTMLElement, dataName) |
 
 <a name="arrayIntersection"></a>
 

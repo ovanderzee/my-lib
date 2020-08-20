@@ -1,3 +1,5 @@
+import { hasOwnProperty } from '../object/hasOwnProperty'
+
 const storage = new WeakMap()
 
 /**
@@ -26,8 +28,30 @@ const getReference = function (element, name) {
     return currData
 }
 
+/**
+ * Check existence named data
+ * @private
+ * @param {object} element - HTMLElement
+ * @param {string} name - name for the data
+ * @return {boolean} the existence of the data by name
+ */
+const hasNamedData = function (element, name) {
+    const allData = storage.get(element) || {}
+    return hasOwnProperty(allData, name)
+}
+
+/**
+ * Remove named data
+ * @private
+ * @param {object} element - HTMLElement
+ * @param {string} name - name for the data
+ */
+const deleteNamedData = function (element, name) {
+    const allData = storage.get(element) || {}
+    delete allData[name]
+}
+
 // TODO:
-// has, delete
 // setCopy, getCopy (with transformerFunction  internal . json.stringify/parse)
 // importDataset, exportDataset
 
@@ -36,10 +60,14 @@ const getReference = function (element, name) {
  * Stores any type of data by referance
  * @property {function} set - store named data by referance (HTMLElement, dataName, data)
  * @property {function} get - retrieve named data by referance (HTMLElement, dataName)
+ * @property {function} has - checks existence named data (HTMLElement, dataName)
+ * @property {function} delete - deletes named data (HTMLElement, dataName)
  */
 const elementStorage = {
     set: setReference,
     get: getReference,
+    has: hasNamedData,
+    delete: deleteNamedData,
 }
 
 export { elementStorage }
