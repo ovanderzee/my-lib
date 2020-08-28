@@ -12,6 +12,7 @@ import { roundAtDecimals, roundAtDigits } from './math/round'
 import { isPrimitive } from './type/isPrimitive.js'
 import { isAttachedToDom } from './dom/isAttachedToDom'
 import { greet } from './console/greet'
+import { arrayCombination } from './array/arrayCombination.js'
 import { arrayIntersection } from './array/arrayIntersection.js'
 import { arrayFromQuery } from './dom/arrayFromQuery.js'
 import { isEqualSigns } from './number/isEqualSigns.js'
@@ -26,6 +27,7 @@ import { deepClone } from './object/deepClone.js'
  */
 export {
     greet,
+    arrayCombination,
     arrayFromCommaSeparatedList,
     arrayFromQuery,
     arrayIntersection,

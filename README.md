@@ -28,8 +28,11 @@ import * as myLib from 'my-lib'
 ## Functions
 
 <dl>
+<dt><a href="#arrayCombination">arrayCombination(array1, array2)</a> ⇒ <code>Array</code></dt>
+<dd><p>Find unique values from both arrays</p>
+</dd>
 <dt><a href="#arrayIntersection">arrayIntersection(array1, array2)</a> ⇒ <code>Array</code></dt>
-<dd><p>Find all values appearing in both arrays</p>
+<dd><p>Find unique values appearing in both arrays</p>
 </dd>
 <dt><a href="#greet">greet()</a></dt>
 <dd><p>The sake of package; log the console</p>
@@ -107,10 +110,23 @@ see <a href="https://developer.mozilla.org/en-US/docs/Glossary/Primitive">https:
 </dd>
 </dl>
 
+<a name="arrayCombination"></a>
+
+## arrayCombination(array1, array2) ⇒ <code>Array</code>
+Find unique values from both arrays
+
+**Kind**: global function  
+**Returns**: <code>Array</code> - the combination  
+
+| Param | Type |
+| --- | --- |
+| array1 | <code>Array</code> | 
+| array2 | <code>Array</code> | 
+
 <a name="arrayIntersection"></a>
 
 ## arrayIntersection(array1, array2) ⇒ <code>Array</code>
-Find all values appearing in both arrays
+Find unique values appearing in both arrays
 
 **Kind**: global function  
 **Returns**: <code>Array</code> - the intersection  
