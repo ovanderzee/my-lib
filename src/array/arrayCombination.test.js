@@ -16,7 +16,7 @@ test('arrayCombination throws when the first array is bad', () => {
     expect(action).toThrow()
 })
 
-test('v throws when the second array is bad', () => {
+test('arrayCombination throws when the second array is bad', () => {
     let array1 = [1, 2, 3, 1, 2, 3]
     let array2 = null
     let action = function () {
