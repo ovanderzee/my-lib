@@ -68,6 +68,12 @@ Pay attention to Date and RegExp objects</p>
 <dt><a href="#isAlphaNumeric">isAlphaNumeric(word)</a> ⇒ <code>boolean</code></dt>
 <dd><p>Test for being a string consisting of letters and/or digits</p>
 </dd>
+<dt><a href="#forceStringify">forceStringify(value)</a> ⇒ <code>String</code></dt>
+<dd><p>Try generic ways to produce a string, an empty string if necessary</p>
+</dd>
+<dt><a href="#stringify">stringify(value)</a> ⇒ <code>String</code></dt>
+<dd><p>Convert anything to a string, an empty string if necessary</p>
+</dd>
 <dt><a href="#isFundamental">isFundamental(value)</a> ⇒ <code>boolean</code></dt>
 <dd><p>Check value for indivisible:
 string, number, boolean, bigint, symbol, undefined, null, function</p>
@@ -348,6 +354,30 @@ Test for being a string consisting of letters and/or digits
 | Param | Type |
 | --- | --- |
 | word | <code>string</code> | 
+
+<a name="forceStringify"></a>
+
+## forceStringify(value) ⇒ <code>String</code>
+Try generic ways to produce a string, an empty string if necessary
+
+**Kind**: global function  
+**Returns**: <code>String</code> - string represention of anything  
+
+| Param | Type |
+| --- | --- |
+| value | <code>any</code> | 
+
+<a name="stringify"></a>
+
+## stringify(value) ⇒ <code>String</code>
+Convert anything to a string, an empty string if necessary
+
+**Kind**: global function  
+**Returns**: <code>String</code> - string represention of anything  
+
+| Param | Type |
+| --- | --- |
+| value | <code>any</code> | 
 
 <a name="isFundamental"></a>
 

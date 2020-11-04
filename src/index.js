@@ -21,6 +21,7 @@ import { hasOwnProperty } from './object/hasOwnProperty.js'
 import { mathSum, mathAvg } from './math/groupProperties'
 import { isFundamental } from './type/isFundamental.js'
 import { deepClone } from './object/deepClone.js'
+import { forceStringify, stringify } from './string/stringify'
 
 /**
  * Bundle alphabetically
@@ -32,6 +33,7 @@ export {
     arrayFromQuery,
     arrayIntersection,
     deepClone,
+    forceStringify,
     hasOwnProperty,
     isAlphaNumeric,
     isFundamental,
@@ -49,4 +51,5 @@ export {
     mathAvg,
     roundAtDecimals,
     roundAtDigits,
+    stringify,
 }
