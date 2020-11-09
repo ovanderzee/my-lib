@@ -72,7 +72,8 @@ Pay attention to Date and RegExp objects</p>
 <dd><p>Try generic ways to produce a string, an empty string if necessary</p>
 </dd>
 <dt><a href="#stringify">stringify(value)</a> ⇒ <code>String</code></dt>
-<dd><p>Convert anything to a string, an empty string if necessary</p>
+<dd><p>Convert anything to a string, an empty string if necessary.
+Expect sensible but not consistent cross-environment behaviour on functions.</p>
 </dd>
 <dt><a href="#isFundamental">isFundamental(value)</a> ⇒ <code>boolean</code></dt>
 <dd><p>Check value for indivisible:
@@ -370,7 +371,8 @@ Try generic ways to produce a string, an empty string if necessary
 <a name="stringify"></a>
 
 ## stringify(value) ⇒ <code>String</code>
-Convert anything to a string, an empty string if necessary
+Convert anything to a string, an empty string if necessary.
+Expect sensible but not consistent cross-environment behaviour on functions.
 
 **Kind**: global function  
 **Returns**: <code>String</code> - string represention of anything  

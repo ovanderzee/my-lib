@@ -53,11 +53,31 @@ describe('stringify converts using toString method of the prototype', () => {
 
         expect(numberString).toBe('Infinity')
     })
+
+    test('for example an Error', () => {
+        const anError = new Error('Dead end!')
+        const spyErrorToString = jest.spyOn(anError, 'toString')
+        const errorString = stringify(anError)
+
+        expect(errorString).toBe('Error: Dead end!')
+        expect(spyErrorToString).toHaveBeenCalled()
+    })
+
+    test('for example a Function', () => {
+        /*
+          Not cross-environment consistent,
+          test assumes nodeJS 12.18.0
+        */
+        const aFunction = () => {}
+        const spyFunctionToString = jest.spyOn(aFunction, 'toString')
+        const functionString = stringify(aFunction)
+
+        expect(functionString).toBe('function aFunction() {}')
+        expect(spyFunctionToString).toHaveBeenCalled()
+    })
 })
 
-describe('stringify uses forceStringify when toString is no available', () => {
-    String.constructor = jest.fn()
-
+describe('stringify uses forceStringify when toString is not available', () => {
     test('for example with undefined', () => {
         const undefValue = undefined
         const spyJsonStringify = jest.spyOn(JSON, 'stringify')
@@ -70,12 +90,25 @@ describe('stringify uses forceStringify when toString is no available', () => {
     test('for example with null', () => {
         const nullValue = null
         const spyJsonStringify = jest.spyOn(JSON, 'stringify')
-        // const spyStringConstruction = jest.spyOn(String, 'constructor')
         const nullString = stringify(nullValue)
 
         expect(nullString).toBe('null')
         expect(spyJsonStringify).not.toHaveBeenCalled()
-        // expect(spyStringConstruction).toHaveBeenCalled()
+    })
+
+    test('for example with a home made object', () => {
+        const objectValue = {
+            id: 459727,
+            name: 'itsName',
+            marked: false,
+        }
+        const spyJsonStringify = jest.spyOn(JSON, 'stringify')
+        const objectString = stringify(objectValue)
+
+        expect(objectString).toBe(
+            '{"id":459727,"name":"itsName","marked":false}',
+        )
+        expect(spyJsonStringify).toHaveBeenCalled()
     })
 
     test('for example with Object.create(null)', () => {
