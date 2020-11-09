@@ -7,10 +7,17 @@ describe('stringify converts using toString method of the prototype', () => {
     test('for example a date', () => {
         const aDate = new Date('28 jan 2006 05:32 GMT+1')
         const spyDateToString = jest.spyOn(aDate, 'toString')
+        // "Sat Jan 28 2006 05:32:00 GMT+0100 (Midden-Europese standaardtijd)"
         const dateString = stringify(aDate)
-        console.log(dateString)
+        const dateStringParts = dateString.match(/(\w+)/g)
 
-        expect(dateString.startsWith('Sat Jan 28 2006 05:32:00')).toBeTruthy()
+        expect(['Fri', 'Sat', 'Sun']).toContain(dateStringParts[0])
+        expect(dateStringParts[1]).toBe('Jan')
+        expect(['27', '28', '29']).toContain(dateStringParts[2])
+        expect(dateStringParts[3]).toBe('2006')
+        expect(dateStringParts[5]).toBe('32')
+        expect(dateStringParts[6]).toBe('00')
+
         expect(spyDateToString).toHaveBeenCalled()
     })
 
