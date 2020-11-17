@@ -54,6 +54,13 @@ describe('stringify converts using toString method of the prototype', () => {
         expect(numberString).toBe('Infinity')
     })
 
+    test('for example a BigInt', () => {
+        const aBigInt = 123n
+        const bigIntString = stringify(aBigInt)
+
+        expect(bigIntString).toBe('123')
+    })
+
     test('for example an Error', () => {
         const anError = new Error('Dead end!')
         const spyErrorToString = jest.spyOn(anError, 'toString')
@@ -86,7 +93,6 @@ describe('stringify uses forceStringify when toString is not available', () => {
         expect(undefString).toBe('undefined')
         expect(spyJsonStringify).not.toHaveBeenCalled()
     })
-
     test('for example with null', () => {
         const nullValue = null
         const spyJsonStringify = jest.spyOn(JSON, 'stringify')
@@ -117,6 +123,22 @@ describe('stringify uses forceStringify when toString is not available', () => {
         const createNullString = stringify(createNullValue)
 
         expect(createNullString).toBe('{}')
+        expect(spyJsonStringify).toHaveBeenCalled()
+    })
+})
+
+describe('stringify returns empty string when no generic method works', () => {
+    test('for example with a cyclic object', () => {
+        const cyclicValue = new function () {
+            this.parent = this
+            this.parent.child = this
+
+            return this
+        }
+        const spyJsonStringify = jest.spyOn(JSON, 'stringify')
+        const cyclicString = stringify(cyclicValue)
+
+        expect(cyclicString).toBe('')
         expect(spyJsonStringify).toHaveBeenCalled()
     })
 })
