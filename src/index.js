@@ -22,6 +22,7 @@ import { mathSum, mathAvg } from './math/groupProperties'
 import { isFundamental } from './type/isFundamental.js'
 import { deepClone } from './object/deepClone.js'
 import { forceStringify, stringify } from './string/stringify'
+import { viewPosition } from './dom/viewPosition'
 
 /**
  * Bundle alphabetically
@@ -52,4 +53,5 @@ export {
     roundAtDecimals,
     roundAtDigits,
     stringify,
+    viewPosition,
 }
