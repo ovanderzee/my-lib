@@ -8,6 +8,7 @@ test('isFundamental accepts primitives', () => {
     expect(isFundamental(testObject.booleanTrue)).toBe(true)
     expect(isFundamental(testObject.booleanFalse)).toBe(true)
     expect(isFundamental(testObject.booleanNew)).toBe(true)
+    expect(isFundamental(testObject.numericBigInt)).toBe(true)
     expect(isFundamental(testObject.numericNaN)).toBe(true)
     expect(isFundamental(testObject.numericInfinity)).toBe(true)
     expect(isFundamental(testObject.numericZero)).toBe(true)

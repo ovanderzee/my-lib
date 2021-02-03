@@ -19,6 +19,7 @@ test('isPrimitive accepts primitives and wrapped objects', () => {
     expect(isBool4PrimitiveOrNot('booleanTrue')).toBe(true)
     expect(isBool4PrimitiveOrNot('booleanFalse')).toBe(true)
     expect(isBool4PrimitiveOrNot('booleanNew')).toBe(true)
+    expect(isBool4PrimitiveOrNot('numericBigInt')).toBe(true)
     expect(isBool4PrimitiveOrNot('numericNaN')).toBe(true)
     expect(isBool4PrimitiveOrNot('numericInfinity')).toBe(true)
     expect(isBool4PrimitiveOrNot('numericZero')).toBe(true)

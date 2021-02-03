@@ -55,7 +55,10 @@ describe('stringify converts using toString method of the prototype', () => {
     })
 
     test('for example a BigInt', () => {
+        /* TypeError: Do not know how to serialize a BigInt
         const aBigInt = 123n
+        */
+        const aBigInt = BigInt(123)
         const bigIntString = stringify(aBigInt)
 
         expect(bigIntString).toBe('123')
@@ -129,12 +132,12 @@ describe('stringify uses forceStringify when toString is not available', () => {
 
 describe('stringify returns empty string when no generic method works', () => {
     test('for example with a cyclic object', () => {
-        const cyclicValue = new function () {
+        const cyclicValue = new (function () {
             this.parent = this
             this.parent.child = this
 
             return this
-        }
+        })()
         const spyJsonStringify = jest.spyOn(JSON, 'stringify')
         const cyclicString = stringify(cyclicValue)
 

@@ -12,6 +12,7 @@ test('isWrappedPrimitive rejects:', () => {
     expect(isWrappedPrimitive(testObject.valueNull)).toBe(false)
     expect(isWrappedPrimitive(testObject.booleanTrue)).toBe(false)
     expect(isWrappedPrimitive(testObject.booleanFalse)).toBe(false)
+    expect(isWrappedPrimitive(testObject.numericBigInt)).toBe(false)
     expect(isWrappedPrimitive(testObject.numericNaN)).toBe(false)
     expect(isWrappedPrimitive(testObject.numericInfinity)).toBe(false)
     expect(isWrappedPrimitive(testObject.numericZero)).toBe(false)

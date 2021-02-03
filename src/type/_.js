@@ -4,6 +4,7 @@ const testObject = {
     booleanFalse: false,
     booleanTrue: true,
     booleanNew: new Boolean(true),
+    numericBigInt: 123n,
     numericNaN: NaN,
     numericInfinity: Infinity,
     numericZero: 0,
