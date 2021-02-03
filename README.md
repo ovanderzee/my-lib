@@ -43,6 +43,9 @@ import * as myLib from 'my-lib'
 <dt><a href="#isAttachedToDom">isAttachedToDom(node)</a> ⇒ <code>boolean</code></dt>
 <dd><p>Check node for being part of the DOM</p>
 </dd>
+<dt><a href="#viewPosition">viewPosition(target, offset)</a> ⇒ <code>Object</code></dt>
+<dd><p>Position element in a two columns, three rows grid of the viewport</p>
+</dd>
 <dt><a href="#mathSum">mathSum(seq)</a> ⇒ <code>number</code></dt>
 <dd><p>Calculate sum of array with Numbers</p>
 </dd>
@@ -172,6 +175,49 @@ Check node for being part of the DOM
 | Param | Type |
 | --- | --- |
 | node | <code>Node</code> | 
+
+<a name="viewPosition"></a>
+
+## viewPosition(target, offset) ⇒ <code>Object</code>
+Position element in a two columns, three rows grid of the viewport
+
+**Kind**: global function  
+**Returns**: <code>Object</code> - specialised functions  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| target | <code>HTMLElement</code> | the element to position |
+| offset | <code>Number</code> | distance to maintain |
+
+
+* [viewPosition(target, offset)](#viewPosition) ⇒ <code>Object</code>
+    * [~pointer(event)](#viewPosition..pointer)
+    * [~aside(event)](#viewPosition..aside)
+
+<a name="viewPosition..pointer"></a>
+
+### viewPosition~pointer(event)
+Position at center side of pointer
+Good for hints (small, near pointer)
+
+**Kind**: inner method of [<code>viewPosition</code>](#viewPosition)  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| event | <code>Object</code> | mouse event |
+
+<a name="viewPosition..aside"></a>
+
+### viewPosition~aside(event)
+Position left or right of viewport
+Good when with a lot of information (wide)
+or when presenting for an audience (same position)
+
+**Kind**: inner method of [<code>viewPosition</code>](#viewPosition)  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| event | <code>Object</code> | mouse event |
 
 <a name="mathSum"></a>
 

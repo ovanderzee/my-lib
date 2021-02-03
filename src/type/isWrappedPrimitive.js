@@ -9,7 +9,7 @@ const isWrappedPrimitive = (value) =>
     typeof value === 'object' &&
     (value instanceof String ||
         value instanceof Number ||
-        value instanceof BigInt ||
+        //        value instanceof BigInt ||
         value instanceof Boolean ||
         value instanceof Symbol)
 

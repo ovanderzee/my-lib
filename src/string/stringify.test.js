@@ -129,12 +129,12 @@ describe('stringify uses forceStringify when toString is not available', () => {
 
 describe('stringify returns empty string when no generic method works', () => {
     test('for example with a cyclic object', () => {
-        const cyclicValue = new function () {
+        const cyclicValue = new (function () {
             this.parent = this
             this.parent.child = this
 
             return this
-        }
+        })()
         const spyJsonStringify = jest.spyOn(JSON, 'stringify')
         const cyclicString = stringify(cyclicValue)
 

@@ -1,9 +1,8 @@
 import { viewPosition } from './viewPosition'
 
 describe('viewPosition', () => {
-
     let bodyHTML
-    let mouseEvent = {stopPropagation: function () {}}
+    let mouseEvent = { stopPropagation: function () {} }
 
     beforeEach(() => {
         bodyHTML = `
@@ -18,7 +17,7 @@ describe('viewPosition', () => {
             </style>
             <div id="info">Information</div>
         `
-        mouseEvent = {stopPropagation: function () {}}
+        mouseEvent = { stopPropagation: function () {} }
     })
 
     describe('setup functions', () => {
@@ -41,12 +40,20 @@ describe('viewPosition', () => {
         window.innerHeight = 900
 
         beforeAll(() => {
-          window.dispatchEvent(new Event('resize'))
-          // the html element, has same size and position as the viewport (the body is the scrolling part).
-          const docElem = document.documentElement;
-          Object.defineProperty(docElem, 'clientWidth', {writable: true, configurable: true, value: window.innerWidth})
-          Object.defineProperty(docElem, 'clientHeight', {writable: true, configurable: true, value: window.innerHeight})
-        });
+            window.dispatchEvent(new Event('resize'))
+            // the html element, has same size and position as the viewport (the body is the scrolling part).
+            const docElem = document.documentElement
+            Object.defineProperty(docElem, 'clientWidth', {
+                writable: true,
+                configurable: true,
+                value: window.innerWidth,
+            })
+            Object.defineProperty(docElem, 'clientHeight', {
+                writable: true,
+                configurable: true,
+                value: window.innerHeight,
+            })
+        })
 
         beforeEach(() => {
             document.body.innerHTML = bodyHTML

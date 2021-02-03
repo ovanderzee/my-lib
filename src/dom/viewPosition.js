@@ -2,12 +2,12 @@
  * Position element in a two columns, three rows grid of the viewport
  * @param {HTMLElement} target - the element to position
  * @param {Number} offset - distance to maintain
- * @returns {Functions{}} specialised functions
+ * @return {Object} specialised functions
  */
 const viewPosition = function (target, offset) {
     const docRoot = document.documentElement
-    target.style.position = 'fixed';
-    offset = (typeof offset !== 'number') ? offset : 16;
+    target.style.position = 'fixed'
+    offset = typeof offset !== 'number' ? offset : 16
 
     /**
      * Position at center side of pointer
@@ -24,9 +24,9 @@ const viewPosition = function (target, offset) {
         } else {
             // pointer at right, position left of pointer
             target.style.left = 'auto'
-            target.style.right = `${docRoot.clientWidth -
-                event.clientX +
-                offset}px`
+            target.style.right = `${
+                docRoot.clientWidth - event.clientX + offset
+            }px`
         }
 
         const ySpace = (docRoot.clientHeight - target.clientHeight) / 2
@@ -42,11 +42,10 @@ const viewPosition = function (target, offset) {
         } else {
             // pointer at bottom, position above pointer
             target.style.top = 'auto'
-            target.style.bottom = `${docRoot.clientHeight -
-                event.clientY +
-                offset}px`
+            target.style.bottom = `${
+                docRoot.clientHeight - event.clientY + offset
+            }px`
         }
-
     }
 
     /**
@@ -84,7 +83,6 @@ const viewPosition = function (target, offset) {
             target.style.top = `${offset}px`
             target.style.bottom = 'auto'
         }
-
     }
 
     return {
@@ -100,3 +98,10 @@ export { viewPosition }
 // return a style object apply it with Object.assign
 // look at pointer events
 // aside == edge
+
+// horizontalLandscapeCentric  2 col
+// horizontalSquareCentric
+// horizontalPortaitCentric
+// verticalLandscapeCentric  3 row
+// verticalSquareCentric
+// verticalPortaitCentric

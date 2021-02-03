@@ -11,7 +11,7 @@ const isPrimitive = function (value) {
         typeof value === 'string' ||
         typeof value === 'number' ||
         typeof value === 'boolean' ||
-        typeof value === 'bigint' ||
+        //        typeof value === 'bigint' ||
         typeof value === 'symbol'
 
     return isWrappedPrimitive(value) || typePrimitive
