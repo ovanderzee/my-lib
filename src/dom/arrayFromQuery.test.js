@@ -1,3 +1,7 @@
+/**
+ * @jest-environment jsdom
+ */
+
 import { arrayFromQuery } from './arrayFromQuery.js'
 
 // query ToArray

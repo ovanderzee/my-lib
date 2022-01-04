@@ -1,3 +1,7 @@
+/**
+ * @jest-environment jsdom
+ */
+
 import { isAttachedToDom } from './isAttachedToDom'
 
 test('isAttachedToDom tests an html-element being inside the DOM', () => {
