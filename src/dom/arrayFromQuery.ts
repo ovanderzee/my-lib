@@ -3,7 +3,7 @@
  * @param {string} cssQuery
  * @returns {Node[]} array with HTMLElements
  */
-const arrayFromQuery = function (cssQuery) {
+const arrayFromQuery = function (cssQuery: string): Element[] {
     // the push.apply operation is in most browsers among the fastest
     // https://jsperf.com/nodelist-to-array/27
     let elementArray = []

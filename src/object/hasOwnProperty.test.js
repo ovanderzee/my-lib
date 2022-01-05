@@ -1,4 +1,4 @@
-import { hasOwnProperty } from './hasOwnProperty.js'
+import { hasOwnProperty } from './hasOwnProperty'
 
 const TestOrigin = function () {
     this.origin = 'origin'

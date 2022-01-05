@@ -4,7 +4,7 @@
  * @param {number} decimals - number of decimals to round at
  * @returns {number} the rounded number
  */
-const roundAtDecimals = function (origin, decimals) {
+const roundAtDecimals = function (origin: number, decimals: number): number {
     // when the returned value would be 0.000...00
     if (origin < 1 + 'e-' + decimals && origin > -1 + 'e-' + decimals) {
         return 0
@@ -19,7 +19,7 @@ const roundAtDecimals = function (origin, decimals) {
  * @param {number} digits - number of significant digits to round at
  * @returns {string} the rounded number as exponent
  */
-const roundAtDigitsExponent = function (origin, digits) {
+const roundAtDigitsExponent = function (origin: number, digits: number): string {
     if (isNaN(origin) || !Number.isInteger(digits) || digits < 1) return 'NaN'
 
     const absolute = Math.abs(origin)
@@ -39,7 +39,7 @@ const roundAtDigitsExponent = function (origin, digits) {
  * @param {number} digits - number of significant digits to round at
  * @returns {number} the rounded number
  */
-const roundAtDigits = function (origin, digits) {
+const roundAtDigits = function (origin: number, digits: number): number {
     const expString = roundAtDigitsExponent(origin, digits)
     return Number(expString)
 }

@@ -1,4 +1,4 @@
-import { deepClone } from './deepClone.js'
+import { deepClone } from './deepClone'
 
 let date = new Date('2006-01-28T05:32:00')
 const testObject = {

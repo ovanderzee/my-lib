@@ -1,4 +1,4 @@
-import { arrayIntersection } from './arrayIntersection.js'
+import { arrayIntersection } from './arrayIntersection'
 
 test('arrayIntersection returns mutual values of two arrays', () => {
     let array1 = [1, 2, 3, 1, 2, 3]

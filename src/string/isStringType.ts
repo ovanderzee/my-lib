@@ -5,7 +5,7 @@ import { isDigit, isLetter } from './isCharType'
  * @param {string} word
  * @returns {boolean} consists of letters and/or digits only
  */
-const isAlphaNumeric = (word) => {
+const isAlphaNumeric = (word: string): boolean => {
     return (
         word &&
         word.split &&

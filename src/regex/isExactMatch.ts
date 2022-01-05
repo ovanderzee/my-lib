@@ -4,7 +4,7 @@
  * @param {RegExp} regex
  * @returns {boolean} all characters of the word were described in regex
  */
-const isExactMatch = (word, regex) => {
+const isExactMatch = (word: string, regex: unknown): boolean => {
     const match = word.match(regex)
     const result = match && match[0] === word
     return result

@@ -1,4 +1,4 @@
-import { isEqualSigns } from './isEqualSigns.js'
+import { isEqualSigns } from './isEqualSigns'
 
 // signEquality
 

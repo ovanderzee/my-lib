@@ -1,6 +1,6 @@
-import { testObject } from './_.js'
-import { hasOwnProperty } from '../object/hasOwnProperty.js'
-import { isPrimitive } from './isPrimitive.js'
+import { testObject } from './_'
+import { hasOwnProperty } from '../object/hasOwnProperty'
+import { isPrimitive } from './isPrimitive'
 
 /**
  * Return true or false for a primitives or not for a non-primitive

@@ -1,4 +1,4 @@
-const testObject = {
+const testObject: Record<string, unknown> = {
     valueUndefined: undefined,
     valueNull: null,
     booleanFalse: false,

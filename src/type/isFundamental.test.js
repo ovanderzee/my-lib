@@ -1,5 +1,5 @@
-import { testObject } from './_.js'
-import { isFundamental } from './isFundamental.js'
+import { testObject } from './_'
+import { isFundamental } from './isFundamental'
 
 // primitives , indivisibles and wrapped primitives
 test('isFundamental accepts primitives', () => {

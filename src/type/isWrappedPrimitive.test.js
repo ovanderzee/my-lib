@@ -1,5 +1,5 @@
-import { testObject } from './_.js'
-import { isWrappedPrimitive } from './isWrappedPrimitive.js'
+import { testObject } from './_'
+import { isWrappedPrimitive } from './isWrappedPrimitive'
 
 test('isWrappedPrimitive accepts wrapped primitives', () => {
     expect(isWrappedPrimitive(testObject.booleanNew)).toBe(true)
