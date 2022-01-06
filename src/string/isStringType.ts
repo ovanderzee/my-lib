@@ -6,7 +6,7 @@ import { isDigit, isLetter } from './isCharType'
  * @returns {boolean} consists of letters and/or digits only
  */
 const isAlphaNumeric = (word: string): boolean => {
-    return (
+    return Boolean(
         word &&
         word.split &&
         !word.split('').some((char) => {

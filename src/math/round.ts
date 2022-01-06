@@ -6,10 +6,12 @@
  */
 const roundAtDecimals = function (origin: number, decimals: number): number {
     // when the returned value would be 0.000...00
+    /* @ts-ignore */
     if (origin < 1 + 'e-' + decimals && origin > -1 + 'e-' + decimals) {
         return 0
     }
     // https://www.jacklmoore.com/notes/rounding-in-javascript/
+    /* @ts-ignore */
     return Number(Math.round(origin + 'e' + decimals) + 'e-' + decimals)
 }
 

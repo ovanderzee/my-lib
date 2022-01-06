@@ -1,10 +1,11 @@
 // rollup.config.js
+import typescript from '@rollup/plugin-typescript';
 import { terser } from 'rollup-plugin-terser'
 
 const name = 'myLib'
 
 export default {
-  input: `src/index.js`,
+  input: `src/index.ts`,
   output: [
     {
       file: `dist/${name}.js`,
@@ -20,6 +21,7 @@ export default {
     },
   ],
   plugins: [
+    typescript(),
     terser(),
   ],
 }
