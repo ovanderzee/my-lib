@@ -1,6 +1,6 @@
 /**
  * Check all arguments for being a number with the same sign
- * @param {Arguments} anonymus - numeric arguments
+ * @param {Arguments} anonymous - numeric arguments
  * @return {boolean} equality
  */
 const isEqualSigns = function () {
