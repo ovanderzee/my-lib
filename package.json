@@ -1,6 +1,6 @@
 {
   "name": "my-lib",
-  "version": "1.6.2",
+  "version": "2.0.0",
   "description": "library of recurring, unconnected functions",
   "main": "dist/myLib.js",
   "module": "module/myLib.js",
