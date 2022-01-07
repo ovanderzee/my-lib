@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/ovanderzee/my-lib.svg?branch=main)](https://travis-ci.org/ovanderzee/my-lib)
+[![CircleCI](https://circleci.com/gh/ovanderzee/my-lib/tree/main.svg?style=svg)](https://circleci.com/gh/ovanderzee/my-lib/?branch=main)
 [![Coverage Status](https://coveralls.io/repos/github/ovanderzee/my-lib/badge.svg?branch=main)](https://coveralls.io/github/ovanderzee/my-lib?branch=main)
 
 # my-lib
