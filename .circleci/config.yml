@@ -20,8 +20,9 @@ workflows:
           version: '16.10'
           # If you are using yarn, change the line below from "npm" to "yarn"
           pkg-manager: npm
-      - coveralls/upload
+      - coveralls/upload:
           # Previously, on Travis:
           # script: jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage
           path_to_lcov: /coverage/lcov.info
           verbose: true
+
