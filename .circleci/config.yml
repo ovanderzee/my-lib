@@ -6,7 +6,7 @@ orbs:
     coveralls: coveralls/coveralls@1.0.6
 
 jobs:
-    build:
+    test-and-upload:
         docker:
             - image: 'circleci/node:14.16.0'
         steps:
@@ -17,5 +17,5 @@ jobs:
             - coveralls/upload:
                   # Previously, on Travis:
                   # script: jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage
-                  path_to_lcov: /coverage/lcov.info
+                  path_to_lcov: /coverage
                   verbose: true
