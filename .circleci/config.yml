@@ -15,7 +15,4 @@ jobs:
                   name: Install and Test
                   command: npm install && npx jest --coverage
             - coveralls/upload:
-                  # Previously, on Travis:
-                  # script: jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage
-                  path_to_lcov: /coverage
                   verbose: true
