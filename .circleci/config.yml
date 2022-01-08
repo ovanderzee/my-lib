@@ -6,7 +6,7 @@ orbs:
     coveralls: coveralls/coveralls@1.0.6
 
 jobs:
-    test-and-upload:
+    build:
         docker:
             - image: 'circleci/node:14.16.0'
         steps:
