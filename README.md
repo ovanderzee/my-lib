@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/ovanderzee/my-lib.svg?branch=main)](https://travis-ci.org/ovanderzee/my-lib)
+[![CircleCI](https://circleci.com/gh/ovanderzee/my-lib/tree/main.svg?style=svg)](https://circleci.com/gh/ovanderzee/my-lib/?branch=main)
 [![Coverage Status](https://coveralls.io/repos/github/ovanderzee/my-lib/badge.svg?branch=main)](https://coveralls.io/github/ovanderzee/my-lib?branch=main)
 
 # my-lib
@@ -58,10 +58,10 @@ import * as myLib from 'my-lib'
 <dt><a href="#roundAtDigits">roundAtDigits(origin, digits)</a> ⇒ <code>number</code></dt>
 <dd><p>Round at digits; round with significance</p>
 </dd>
-<dt><a href="#isEqualSigns">isEqualSigns(anonymus)</a> ⇒ <code>boolean</code></dt>
+<dt><a href="#isEqualSigns">isEqualSigns(anonymous)</a> ⇒ <code>boolean</code></dt>
 <dd><p>Check all arguments for being a number with the same sign</p>
 </dd>
-<dt><a href="#isUsableNumber">isUsableNumber(anonymus)</a> ⇒ <code>boolean</code></dt>
+<dt><a href="#isUsableNumber">isUsableNumber(anonymous)</a> ⇒ <code>boolean</code></dt>
 <dd><p>Test for values with which calculations can be done</p>
 </dd>
 <dt><a href="#deepClone">deepClone(variable)</a> ⇒ <code>any</code></dt>
@@ -122,64 +122,64 @@ see <a href="https://developer.mozilla.org/en-US/docs/Glossary/Primitive">https:
 ## arrayCombination(array1, array2) ⇒ <code>Array</code>
 Find unique values from both arrays
 
-**Kind**: global function
-**Returns**: <code>Array</code> - the combination
+**Kind**: global function  
+**Returns**: <code>Array</code> - the combination  
 
 | Param | Type |
 | --- | --- |
-| array1 | <code>Array</code> |
-| array2 | <code>Array</code> |
+| array1 | <code>Array</code> | 
+| array2 | <code>Array</code> | 
 
 <a name="arrayIntersection"></a>
 
 ## arrayIntersection(array1, array2) ⇒ <code>Array</code>
 Find unique values appearing in both arrays
 
-**Kind**: global function
-**Returns**: <code>Array</code> - the intersection
+**Kind**: global function  
+**Returns**: <code>Array</code> - the intersection  
 
 | Param | Type |
 | --- | --- |
-| array1 | <code>Array</code> |
-| array2 | <code>Array</code> |
+| array1 | <code>Array</code> | 
+| array2 | <code>Array</code> | 
 
 <a name="greet"></a>
 
 ## greet()
 The sake of package; log the console
 
-**Kind**: global function
+**Kind**: global function  
 <a name="arrayFromQuery"></a>
 
 ## arrayFromQuery(cssQuery) ⇒ <code>Array.&lt;Node&gt;</code>
 Create a genuine array from a css-query
 
-**Kind**: global function
-**Returns**: <code>Array.&lt;Node&gt;</code> - array with HTMLElements
+**Kind**: global function  
+**Returns**: <code>Array.&lt;Node&gt;</code> - array with (HTML)Elements  
 
 | Param | Type |
 | --- | --- |
-| cssQuery | <code>string</code> |
+| cssQuery | <code>string</code> | 
 
 <a name="isAttachedToDom"></a>
 
 ## isAttachedToDom(node) ⇒ <code>boolean</code>
 Check node for being part of the DOM
 
-**Kind**: global function
-**Returns**: <code>boolean</code> - true when the node is on the webpage
+**Kind**: global function  
+**Returns**: <code>boolean</code> - true when the node is on the webpage  
 
 | Param | Type |
 | --- | --- |
-| node | <code>Node</code> |
+| node | <code>Node</code> | 
 
 <a name="mathSum"></a>
 
 ## mathSum(seq) ⇒ <code>number</code>
 Calculate sum of array with Numbers
 
-**Kind**: global function
-**Returns**: <code>number</code> - the sum of the numbers
+**Kind**: global function  
+**Returns**: <code>number</code> - the sum of the numbers  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -190,8 +190,8 @@ Calculate sum of array with Numbers
 ## mathAvg(seq) ⇒ <code>number</code>
 Calculate average of array with Numbers
 
-**Kind**: global function
-**Returns**: <code>number</code> - the average of the numbers
+**Kind**: global function  
+**Returns**: <code>number</code> - the average of the numbers  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -202,8 +202,8 @@ Calculate average of array with Numbers
 ## roundAtDecimals(origin, decimals) ⇒ <code>number</code>
 Round at decimals
 
-**Kind**: global function
-**Returns**: <code>number</code> - the rounded number
+**Kind**: global function  
+**Returns**: <code>number</code> - the rounded number  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -215,8 +215,8 @@ Round at decimals
 ## roundAtDigitsExponent(origin, digits) ⇒ <code>string</code>
 Round at digits to exponential notation; round with significance
 
-**Kind**: global function
-**Returns**: <code>string</code> - the rounded number as exponent
+**Kind**: global function  
+**Returns**: <code>string</code> - the rounded number as exponent  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -228,8 +228,8 @@ Round at digits to exponential notation; round with significance
 ## roundAtDigits(origin, digits) ⇒ <code>number</code>
 Round at digits; round with significance
 
-**Kind**: global function
-**Returns**: <code>number</code> - the rounded number
+**Kind**: global function  
+**Returns**: <code>number</code> - the rounded number  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -238,27 +238,27 @@ Round at digits; round with significance
 
 <a name="isEqualSigns"></a>
 
-## isEqualSigns(anonymus) ⇒ <code>boolean</code>
+## isEqualSigns(anonymous) ⇒ <code>boolean</code>
 Check all arguments for being a number with the same sign
 
-**Kind**: global function
-**Returns**: <code>boolean</code> - equality
+**Kind**: global function  
+**Returns**: <code>boolean</code> - equality  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| anonymus | <code>Arguments</code> | numeric arguments |
+| anonymous | <code>Arguments</code> | numeric arguments |
 
 <a name="isUsableNumber"></a>
 
-## isUsableNumber(anonymus) ⇒ <code>boolean</code>
+## isUsableNumber(anonymous) ⇒ <code>boolean</code>
 Test for values with which calculations can be done
 
-**Kind**: global function
-**Returns**: <code>boolean</code> - every argument is a useable number
+**Kind**: global function  
+**Returns**: <code>boolean</code> - every argument is a usable number  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| anonymus | <code>Arguments</code> | one or more values to test |
+| anonymous | <code>Arguments</code> | one or more values to test |
 
 <a name="deepClone"></a>
 
@@ -266,8 +266,8 @@ Test for values with which calculations can be done
 Recursively copy all indivisible data to new object
 Pay attention to Date and RegExp objects
 
-**Kind**: global function
-**Returns**: <code>any</code> - the same data with different references
+**Kind**: global function  
+**Returns**: <code>any</code> - the same data with different references  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -278,122 +278,122 @@ Pay attention to Date and RegExp objects
 ## hasOwnProperty(object, prop) ⇒ <code>boolean</code>
 Check for existence of property in object
 
-**Kind**: global function
-**Returns**: <code>boolean</code> - the object has the property as its own property -- not inheriting it
+**Kind**: global function  
+**Returns**: <code>boolean</code> - the object has the property as its own property -- not inheriting it  
 
 | Param | Type |
 | --- | --- |
-| object | <code>object</code> |
-| prop | <code>string</code> |
+| object | <code>object</code> | 
+| prop | <code>string</code> | 
 
 <a name="isExactMatch"></a>
 
 ## isExactMatch(word, regex) ⇒ <code>boolean</code>
 Check for a match covering the string entirely
 
-**Kind**: global function
-**Returns**: <code>boolean</code> - all characters of the word were described in regex
+**Kind**: global function  
+**Returns**: <code>boolean</code> - all characters of the word were described in regex  
 
 | Param | Type |
 | --- | --- |
-| word | <code>string</code> |
-| regex | <code>RegExp</code> |
+| word | <code>string</code> | 
+| regex | <code>RegExp</code> | 
 
 <a name="arrayFromCommaSeparatedList"></a>
 
 ## arrayFromCommaSeparatedList(commaSeperatedList) ⇒ <code>Array.&lt;string&gt;</code>
 Process comma separated list to a sanitised array with normalised strings
 
-**Kind**: global function
-**Returns**: <code>Array.&lt;string&gt;</code> - array with separate strings
+**Kind**: global function  
+**Returns**: <code>Array.&lt;string&gt;</code> - array with separate strings  
 
 | Param | Type |
 | --- | --- |
-| commaSeperatedList | <code>string</code> |
+| commaSeperatedList | <code>string</code> | 
 
 <a name="isChar"></a>
 
 ## isChar(char) ⇒ <code>boolean</code>
 Test value for being a character; a string with a length of one
 
-**Kind**: global function
-**Returns**: <code>boolean</code> - is a single character
+**Kind**: global function  
+**Returns**: <code>boolean</code> - is a single character  
 
 | Param | Type |
 | --- | --- |
-| char | <code>string</code> |
+| char | <code>string</code> | 
 
 <a name="isDigit"></a>
 
 ## isDigit(char) ⇒ <code>boolean</code>
 Test value for being a string representation of a digit
 
-**Kind**: global function
-**Returns**: <code>boolean</code> - is a number 0-9
+**Kind**: global function  
+**Returns**: <code>boolean</code> - is a number 0-9  
 
 | Param | Type |
 | --- | --- |
-| char | <code>string</code> |
+| char | <code>string</code> | 
 
 <a name="isLetter"></a>
 
 ## isLetter(char) ⇒ <code>boolean</code>
 Test value for being a letter
 
-**Kind**: global function
-**Returns**: <code>boolean</code> - char is a letter
+**Kind**: global function  
+**Returns**: <code>boolean</code> - char is a letter  
 
 | Param | Type |
 | --- | --- |
-| char | <code>string</code> |
+| char | <code>string</code> | 
 
 <a name="isLower"></a>
 
 ## isLower(char) ⇒ <code>boolean</code>
 Test value for being a lowercase letter
 
-**Kind**: global function
-**Returns**: <code>boolean</code> - char is a lower-case letter
+**Kind**: global function  
+**Returns**: <code>boolean</code> - char is a lower-case letter  
 
 | Param | Type |
 | --- | --- |
-| char | <code>string</code> |
+| char | <code>string</code> | 
 
 <a name="isUpper"></a>
 
 ## isUpper(char) ⇒ <code>boolean</code>
 Test value for being an uppercase letter
 
-**Kind**: global function
-**Returns**: <code>boolean</code> - char is a upper-case letter
+**Kind**: global function  
+**Returns**: <code>boolean</code> - char is a upper-case letter  
 
 | Param | Type |
 | --- | --- |
-| char | <code>string</code> |
+| char | <code>string</code> | 
 
 <a name="isAlphaNumeric"></a>
 
 ## isAlphaNumeric(word) ⇒ <code>boolean</code>
 Test for being a string consisting of letters and/or digits
 
-**Kind**: global function
-**Returns**: <code>boolean</code> - consists of letters and/or digits only
+**Kind**: global function  
+**Returns**: <code>boolean</code> - consists of letters and/or digits only  
 
 | Param | Type |
 | --- | --- |
-| word | <code>string</code> |
+| word | <code>string</code> | 
 
 <a name="forceStringify"></a>
 
 ## forceStringify(value) ⇒ <code>String</code>
 Try generic ways to produce a string, an empty string if necessary
 
-**Kind**: global function
-**Returns**: <code>String</code> - string represention of anything
+**Kind**: global function  
+**Returns**: <code>String</code> - string represention of anything  
 
 | Param | Type |
 | --- | --- |
-| value | <code>any</code> |
+| value | <code>any</code> | 
 
 <a name="stringify"></a>
 
@@ -401,12 +401,12 @@ Try generic ways to produce a string, an empty string if necessary
 Convert anything to a string, an empty string if necessary.
 Expect sensible but not consistent cross-environment behaviour on functions.
 
-**Kind**: global function
-**Returns**: <code>String</code> - string represention of anything
+**Kind**: global function  
+**Returns**: <code>String</code> - string represention of anything  
 
 | Param | Type |
 | --- | --- |
-| value | <code>any</code> |
+| value | <code>any</code> | 
 
 <a name="isFundamental"></a>
 
@@ -414,7 +414,7 @@ Expect sensible but not consistent cross-environment behaviour on functions.
 Check value for indivisible:
 string, number, boolean, bigint, symbol, undefined, null, function
 
-**Kind**: global function
+**Kind**: global function  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -426,8 +426,8 @@ string, number, boolean, bigint, symbol, undefined, null, function
 Check value for being a primitive
 but leave out the anti-value undefined;
 
-**Kind**: global function
-**Returns**: <code>boolean</code> - is a primitive
+**Kind**: global function  
+**Returns**: <code>boolean</code> - is a primitive  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -440,8 +440,8 @@ Check the variable for living in an object wrapper
 These can be generated by new String / Number etc.
 see https://developer.mozilla.org/en-US/docs/Glossary/Primitive
 
-**Kind**: global function
-**Returns**: <code>boolean</code> - is a wrapped primitive
+**Kind**: global function  
+**Returns**: <code>boolean</code> - is a wrapped primitive  
 
 | Param | Type | Description |
 | --- | --- | --- |

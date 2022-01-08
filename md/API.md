@@ -31,10 +31,10 @@
 <dt><a href="#roundAtDigits">roundAtDigits(origin, digits)</a> ⇒ <code>number</code></dt>
 <dd><p>Round at digits; round with significance</p>
 </dd>
-<dt><a href="#isEqualSigns">isEqualSigns(anonymus)</a> ⇒ <code>boolean</code></dt>
+<dt><a href="#isEqualSigns">isEqualSigns(anonymous)</a> ⇒ <code>boolean</code></dt>
 <dd><p>Check all arguments for being a number with the same sign</p>
 </dd>
-<dt><a href="#isUsableNumber">isUsableNumber(anonymus)</a> ⇒ <code>boolean</code></dt>
+<dt><a href="#isUsableNumber">isUsableNumber(anonymous)</a> ⇒ <code>boolean</code></dt>
 <dd><p>Test for values with which calculations can be done</p>
 </dd>
 <dt><a href="#deepClone">deepClone(variable)</a> ⇒ <code>any</code></dt>
@@ -128,7 +128,7 @@ The sake of package; log the console
 Create a genuine array from a css-query
 
 **Kind**: global function  
-**Returns**: <code>Array.&lt;Node&gt;</code> - array with HTMLElements  
+**Returns**: <code>Array.&lt;Node&gt;</code> - array with (HTML)Elements  
 
 | Param | Type |
 | --- | --- |
@@ -211,7 +211,7 @@ Round at digits; round with significance
 
 <a name="isEqualSigns"></a>
 
-## isEqualSigns(anonymus) ⇒ <code>boolean</code>
+## isEqualSigns(anonymous) ⇒ <code>boolean</code>
 Check all arguments for being a number with the same sign
 
 **Kind**: global function  
@@ -219,19 +219,19 @@ Check all arguments for being a number with the same sign
 
 | Param | Type | Description |
 | --- | --- | --- |
-| anonymus | <code>Arguments</code> | numeric arguments |
+| anonymous | <code>Arguments</code> | numeric arguments |
 
 <a name="isUsableNumber"></a>
 
-## isUsableNumber(anonymus) ⇒ <code>boolean</code>
+## isUsableNumber(anonymous) ⇒ <code>boolean</code>
 Test for values with which calculations can be done
 
 **Kind**: global function  
-**Returns**: <code>boolean</code> - every argument is a useable number  
+**Returns**: <code>boolean</code> - every argument is a usable number  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| anonymus | <code>Arguments</code> | one or more values to test |
+| anonymous | <code>Arguments</code> | one or more values to test |
 
 <a name="deepClone"></a>
 
