@@ -1,10 +1,11 @@
 // rollup.config.js
 import typescript from '@rollup/plugin-typescript';
 import { terser } from 'rollup-plugin-terser'
+import dts from 'rollup-plugin-dts';
 
 const name = 'myLib'
 
-export default {
+export default [{
   input: `src/index.ts`,
   output: [
     {
@@ -24,4 +25,12 @@ export default {
     typescript(),
     terser(),
   ],
-}
+},
+{
+  input: "src/index.ts",
+  output: {
+    file: "types/index.d.ts",
+    format: "es",
+  },
+  plugins: [dts()],
+}]
