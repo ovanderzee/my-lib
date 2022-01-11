@@ -6,7 +6,6 @@
   "module": "module/myLib.js",
   "scripts": {
     "prebuild": "cf dist module && prettier './src/**/*.js' --write",
-    "postbuild": "jsdoc2md --files src/**/*.ts --configure ./jsdoc2md.json > md/API.md && markdown-include ./md/markdown.json",
     "build": "rollup --config",
     "coverage": "cf coverage && jest --coverage",
     "once": "npm run test && npm run build",
@@ -45,7 +44,6 @@
     "eslint-plugin-jest": "^25.3.4",
     "jest": "^27.4.5",
     "jsdoc-babel": "^0.5.0",
-    "jsdoc-to-markdown": "^7.1.0",
     "markdown-include": "^0.4.3",
     "onchange": "^7.1.0",
     "prettier": "^2.5.1",
