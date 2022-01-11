@@ -3,7 +3,7 @@
  * @param {string} char
  * @returns {boolean} is a single character
  */
-const isChar = (char) => {
+const isChar = (char: string): boolean => {
     return Boolean(char && typeof char === 'string' && char.length === 1)
 }
 
@@ -12,7 +12,7 @@ const isChar = (char) => {
  * @param {string} char
  * @returns {boolean} is a number 0-9
  */
-const isDigit = (char) => {
+const isDigit = (char: string): boolean => {
     return isChar(char) && Boolean(char.match(/[0-9]/))
 }
 
@@ -21,7 +21,7 @@ const isDigit = (char) => {
  * @param {string} char
  * @returns {boolean} char is a letter
  */
-const isLetter = (char) => {
+const isLetter = (char: string): boolean => {
     return isChar(char) && char.toLowerCase() !== char.toUpperCase()
 }
 
@@ -30,7 +30,7 @@ const isLetter = (char) => {
  * @param {string} char
  * @returns {boolean} char is a lower-case letter
  */
-const isLower = (char) => {
+const isLower = (char: string): boolean => {
     return (
         isChar(char) &&
         char === char.toLowerCase() &&
@@ -43,7 +43,7 @@ const isLower = (char) => {
  * @param {string} char
  * @returns {boolean} char is a upper-case letter
  */
-const isUpper = (char) => {
+const isUpper = (char: string): boolean => {
     return (
         isChar(char) &&
         char === char.toUpperCase() &&

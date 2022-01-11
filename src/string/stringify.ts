@@ -4,7 +4,7 @@
  * @param {any} value
  * @return {String} string represention of anything
  */
-const finalStringify = function (value) {
+const finalStringify = function (value: any): string {
     try {
         return JSON.stringify(value)
     } catch (e) {
@@ -17,7 +17,7 @@ const finalStringify = function (value) {
  * @param {any} value
  * @return {String} string represention of anything
  */
-const forceStringify = function (value) {
+const forceStringify = function (value: any): string {
     let result
     try {
         // first coerce to string for the sake of undefined
@@ -37,7 +37,7 @@ const forceStringify = function (value) {
  * @param {any} value
  * @return {String} string represention of anything
  */
-const stringify = function (value) {
+const stringify = function (value: any): string {
     let result
     try {
         result = value.toString()

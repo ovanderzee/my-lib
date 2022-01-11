@@ -1,4 +1,4 @@
-import { isFundamental } from '../type/isFundamental.js'
+import { isFundamental } from '../type/isFundamental'
 
 /**
  * Recursively copy all indivisible data to new object
@@ -6,7 +6,7 @@ import { isFundamental } from '../type/isFundamental.js'
  * @param {any} variable - any value to check
  * @returns {any} the same data with different references
  */
-const deepClone = function (variable) {
+const deepClone = function (variable: any): any {
     let product = variable
     if (isFundamental(variable)) {
         return variable

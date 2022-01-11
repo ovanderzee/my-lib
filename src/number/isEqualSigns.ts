@@ -3,9 +3,9 @@
  * @param {Arguments} anonymous - numeric arguments
  * @return {boolean} equality
  */
-const isEqualSigns = function () {
-    let positives = [...arguments].filter((arg) => arg >= 0)
-    let negatives = [...arguments].filter((arg) => arg <= 0)
+const isEqualSigns = function (): boolean {
+    let positives: number[] = [...arguments].filter((arg) => arg >= 0)
+    let negatives: number[] = [...arguments].filter((arg) => arg <= 0)
     return (
         positives.length === arguments.length ||
         negatives.length === arguments.length

@@ -1,19 +1,20 @@
 {
   "name": "my-lib",
-  "version": "1.6.2",
+  "version": "2.0.0",
   "description": "library of recurring, unconnected functions",
   "main": "dist/myLib.js",
   "module": "module/myLib.js",
   "scripts": {
     "prebuild": "cf dist module && prettier './src/**/*.js' --write",
-    "postbuild": "jsdoc2md src/**/*.js > md/API.md && markdown-include ./md/markdown.json",
+    "postbuild": "node gen-ts-docs.mjs && markdown-include ./md/markdown.json",
     "build": "rollup --config",
     "coverage": "cf coverage && jest --coverage",
     "once": "npm run test && npm run build",
-    "pretest": "eslint src/*.js",
+    "pretest": "eslint src/*.*",
     "test": "jest",
     "watch": "onchange --initial \"src/**/*.js\" -- npm run once --silent"
   },
+  "types": "types/index.d.ts",
   "keywords": [
     "library",
     "math",
@@ -35,19 +36,24 @@
   "devDependencies": {
     "@babel/core": "^7.16.7",
     "@babel/preset-env": "^7.16.7",
-    "@rollup/plugin-babel": "^5.3.0",
+    "@babel/preset-typescript": "^7.16.7",
+    "@rollup/plugin-typescript": "^8.3.0",
     "clear-folder": "^3.0.0",
     "coveralls": "^3.1.1",
     "eslint": "^8.6.0",
     "eslint-plugin-jasmine": "^4.1.3",
     "eslint-plugin-jest": "^25.3.4",
+    "generate-ts-docs": "^0.0.13",
     "jest": "^27.4.5",
-    "jsdoc-to-markdown": "^7.1.0",
+    "jsdoc-babel": "^0.5.0",
     "markdown-include": "^0.4.3",
     "onchange": "^7.1.0",
     "prettier": "^2.5.1",
     "rollup": "^2.63.0",
+    "rollup-plugin-dts": "^4.1.0",
     "rollup-plugin-terser": "^7.0.2",
-    "static-cling": "^2.0.3"
+    "static-cling": "^2.0.3",
+    "tslib": "^1.14.1",
+    "typescript": "^4.5.4"
   }
 }

@@ -12,6 +12,7 @@ describe('isAlphaNumeric accepts any combination of letters or digits', () => {
         expect(isAlphaNumeric('123abc')).toBeTruthy()
         expect(isAlphaNumeric('123Abc')).toBeTruthy()
         expect(isAlphaNumeric('123ABC')).toBeTruthy()
+        expect(isAlphaNumeric(new String('123ABC'))).toBeTruthy()
     })
 
     test('isAlphaNumeric rejects other strings', () => {

@@ -3,9 +3,10 @@
  * @param {Arguments} anonymous - one or more values to test
  * @returns {boolean} every argument is a usable number
  */
-const isUsableNumber = function () {
-    let isUsable = Boolean(arguments.length)
-    Array.from(arguments).forEach((value) => {
+const isUsableNumber = function (...args: number[]): boolean {
+    let isUsable = Boolean(args.length)
+    const numbers = Array.from(args)
+    numbers.forEach((value) => {
         isUsable =
             isUsable && typeof value === 'number' && Number.isFinite(value)
     })

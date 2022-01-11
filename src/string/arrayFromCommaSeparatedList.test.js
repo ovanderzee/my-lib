@@ -1,4 +1,4 @@
-import { arrayFromCommaSeparatedList } from './arrayFromCommaSeparatedList.js'
+import { arrayFromCommaSeparatedList } from './arrayFromCommaSeparatedList'
 
 // commaSeperatedListToArray
 test('arrayFromCommaSeparatedList applies normalisation', () => {

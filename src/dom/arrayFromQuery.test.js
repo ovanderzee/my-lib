@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 
-import { arrayFromQuery } from './arrayFromQuery.js'
+import { arrayFromQuery } from './arrayFromQuery'
 
 // query ToArray
 test('arrayFromQuery returns a plain array with references to HTMLElements', () => {

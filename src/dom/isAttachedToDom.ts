@@ -3,7 +3,7 @@
  * @param {Node} node
  * @returns {boolean} true when the node is on the webpage
  */
-const isAttachedToDom = function (elm) {
+const isAttachedToDom = function (elm: Element): boolean {
     return (
         elm &&
         (elm.getRootNode() instanceof Document ||
