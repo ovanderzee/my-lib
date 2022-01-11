@@ -44,6 +44,7 @@ test('isPrimitive rejects non-primitives', () => {
     expect(isBool4PrimitiveOrNot('objectTrivial')).toBe(false)
     expect(isBool4PrimitiveOrNot('objectRelevant')).toBe(false)
     expect(isBool4PrimitiveOrNot('functionNoop')).toBe(false)
+    expect(isBool4PrimitiveOrNot('functionSomething')).toBe(false)
     expect(isBool4PrimitiveOrNot('dateToday')).toBe(false)
     expect(isBool4PrimitiveOrNot('regexp')).toBe(false)
 })

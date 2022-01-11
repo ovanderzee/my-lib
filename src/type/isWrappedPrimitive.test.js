@@ -28,6 +28,7 @@ test('isWrappedPrimitive rejects:', () => {
     expect(isWrappedPrimitive(testObject.objectTrivial)).toBe(false)
     expect(isWrappedPrimitive(testObject.objectRelevant)).toBe(false)
     expect(isWrappedPrimitive(testObject.functionNoop)).toBe(false)
+    expect(isWrappedPrimitive(testObject.functionSomething)).toBe(false)
     expect(isWrappedPrimitive(testObject.dateToday)).toBe(false)
     expect(isWrappedPrimitive(testObject.dateTodayString)).toBe(false)
     expect(isWrappedPrimitive(testObject.regexp)).toBe(false)

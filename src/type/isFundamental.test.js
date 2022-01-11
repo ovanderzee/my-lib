@@ -21,6 +21,7 @@ test('isFundamental accepts primitives', () => {
     expect(isFundamental(testObject.stringLengthy)).toBe(true)
     expect(isFundamental(testObject.stringNew)).toBe(true)
     expect(isFundamental(testObject.functionNoop)).toBe(true)
+    expect(isFundamental(testObject.functionSomething)).toBe(true)
     expect(isFundamental(testObject.dateTodayString)).toBe(true)
     expect(isFundamental(testObject.symbolAlpha)).toBe(true)
 })

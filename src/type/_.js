@@ -28,6 +28,7 @@ const testObject = {
         b: 'b',
     },
     functionNoop: () => {},
+    functionSomething: (a, b) => [a, b],
     dateToday: new Date(),
     dateTodayString: Date(),
     regexp: /^\d+$/gi,
