@@ -4,7 +4,8 @@ src
 test
 coverage
 server.js
-.travis.yml
+gen-ts-docs.mjs
+tsconfig.json
 *.map
 *.config.js
 .*
