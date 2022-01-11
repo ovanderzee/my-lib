@@ -1,351 +1,408 @@
-## Members
-
-<dl>
-<dt><a href="#mathSum">mathSum</a> ⇒ <code>number</code></dt>
-<dd><p>Calculate average of array with Numbers</p></dd>
-<dt><a href="#roundAtDecimals">roundAtDecimals</a> ⇒ <code>string</code></dt>
-<dd><p>Round at digits to exponential notation; round with significance</p></dd>
-<dt><a href="#roundAtDigitsExponent">roundAtDigitsExponent</a> ⇒ <code>number</code></dt>
-<dd><p>Round at digits; round with significance</p></dd>
-<dt><a href="#isChar">isChar</a> ⇒ <code>boolean</code></dt>
-<dd><p>Test value for being a string representation of a digit</p></dd>
-<dt><a href="#isDigit">isDigit</a> ⇒ <code>boolean</code></dt>
-<dd><p>Test value for being a letter</p></dd>
-<dt><a href="#isLetter">isLetter</a> ⇒ <code>boolean</code></dt>
-<dd><p>Test value for being a lowercase letter</p></dd>
-<dt><a href="#isLower">isLower</a> ⇒ <code>boolean</code></dt>
-<dd><p>Test value for being an uppercase letter</p></dd>
-<dt><a href="#forceStringify">forceStringify</a> ⇒ <code>String</code></dt>
-<dd><p>Convert anything to a string, an empty string if necessary.
-Expect sensible but not consistent cross-environment behaviour on functions.</p></dd>
-</dl>
-
-## Functions
-
-<dl>
-<dt><a href="#arrayCombination">arrayCombination(array1, array2)</a> ⇒ <code>Array</code></dt>
-<dd><p>Find unique values from both arrays</p></dd>
-<dt><a href="#arrayIntersection">arrayIntersection(array1, array2)</a> ⇒ <code>Array</code></dt>
-<dd><p>Find unique values appearing in both arrays</p></dd>
-<dt><a href="#greet">greet()</a></dt>
-<dd><p>The sake of package; log the console</p></dd>
-<dt><a href="#arrayFromQuery">arrayFromQuery(cssQuery)</a> ⇒ <code>Array.&lt;Node&gt;</code></dt>
-<dd><p>Create a genuine array from a css-query</p></dd>
-<dt><a href="#isAttachedToDom">isAttachedToDom(node)</a> ⇒ <code>boolean</code></dt>
-<dd><p>Check node for being part of the DOM</p></dd>
-<dt><a href="#mathSum">mathSum(seq)</a> ⇒ <code>number</code></dt>
-<dd><p>Calculate sum of array with Numbers</p></dd>
-<dt><a href="#roundAtDecimals">roundAtDecimals(origin, decimals)</a> ⇒ <code>number</code></dt>
-<dd><p>Round at decimals</p></dd>
-<dt><a href="#isEqualSigns">isEqualSigns(anonymus)</a> ⇒ <code>boolean</code></dt>
-<dd><p>Check all arguments for being a number with the same sign</p></dd>
-<dt><a href="#isUsableNumber">isUsableNumber(anonymous)</a> ⇒ <code>boolean</code></dt>
-<dd><p>Test for values with which calculations can be done</p></dd>
-<dt><a href="#deepClone">deepClone(variable)</a> ⇒ <code>any</code></dt>
-<dd><p>Recursively copy all indivisible data to new object
-Pay attention to Date and RegExp objects</p></dd>
-<dt><a href="#hasOwnProperty">hasOwnProperty(object, prop)</a> ⇒ <code>boolean</code></dt>
-<dd><p>Check for existence of property in object</p></dd>
-<dt><a href="#isExactMatch">isExactMatch(word, regex)</a> ⇒ <code>boolean</code></dt>
-<dd><p>Check for a match covering the string entirely</p></dd>
-<dt><a href="#arrayFromCommaSeparatedList">arrayFromCommaSeparatedList(commaSeperatedList)</a> ⇒ <code>Array.&lt;string&gt;</code></dt>
-<dd><p>Process comma separated list to a sanitised array with normalised strings</p></dd>
-<dt><a href="#isChar">isChar(char)</a> ⇒ <code>boolean</code></dt>
-<dd><p>Test value for being a character; a string with a length of one</p></dd>
-<dt><a href="#isAlphaNumeric">isAlphaNumeric(word)</a> ⇒ <code>boolean</code></dt>
-<dd><p>Test for being a string consisting of letters and/or digits</p></dd>
-<dt><a href="#forceStringify">forceStringify(value)</a> ⇒ <code>String</code></dt>
-<dd><p>Try generic ways to produce a string, an empty string if necessary</p></dd>
-</dl>
-
-<a name="mathSum"></a>
-
-## mathSum ⇒ <code>number</code>
-<p>Calculate average of array with Numbers</p>
-
-**Kind**: global variable  
-**Returns**: <code>number</code> - <p>the average of the numbers</p>  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| seq | <code>Array.&lt;number&gt;</code> | <p>array containing numbers</p> |
-
-<a name="roundAtDecimals"></a>
-
-## roundAtDecimals ⇒ <code>string</code>
-<p>Round at digits to exponential notation; round with significance</p>
-
-**Kind**: global variable  
-**Returns**: <code>string</code> - <p>the rounded number as exponent</p>  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| origin | <code>number</code> | <p>any number to round</p> |
-| digits | <code>number</code> | <p>number of significant digits to round at</p> |
-
-<a name="roundAtDigitsExponent"></a>
-
-## roundAtDigitsExponent ⇒ <code>number</code>
-<p>Round at digits; round with significance</p>
-
-**Kind**: global variable  
-**Returns**: <code>number</code> - <p>the rounded number</p>  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| origin | <code>number</code> | <p>any number to round</p> |
-| digits | <code>number</code> | <p>number of significant digits to round at</p> |
-
-<a name="isChar"></a>
-
-## isChar ⇒ <code>boolean</code>
-<p>Test value for being a string representation of a digit</p>
+## API
 
-**Kind**: global variable  
-**Returns**: <code>boolean</code> - <p>is a number 0-9</p>  
+### arrayCombination(array1, array2)
 
-| Param | Type |
-| --- | --- |
-| char | <code>string</code> | 
+Find unique values from both arrays
 
-<a name="isDigit"></a>
+***Parameters***
 
-## isDigit ⇒ <code>boolean</code>
-<p>Test value for being a letter</p>
+- **`array1`** (`any[]`)
+- **`array2`** (`any[]`)
 
-**Kind**: global variable  
-**Returns**: <code>boolean</code> - <p>char is a letter</p>  
+***Return type***
 
-| Param | Type |
-| --- | --- |
-| char | <code>string</code> | 
+the combination
 
-<a name="isLetter"></a>
+```
+any[]
+```
+### arrayFromCommaSeparatedList(commaSeparatedList)
 
-## isLetter ⇒ <code>boolean</code>
-<p>Test value for being a lowercase letter</p>
+Process comma separated list to a sanitised array with normalised strings
 
-**Kind**: global variable  
-**Returns**: <code>boolean</code> - <p>char is a lower-case letter</p>  
+***Parameters***
 
-| Param | Type |
-| --- | --- |
-| char | <code>string</code> | 
+- **`commaSeparatedList`** (`string`)
 
-<a name="isLower"></a>
+***Return type***
 
-## isLower ⇒ <code>boolean</code>
-<p>Test value for being an uppercase letter</p>
+array with separate strings
 
-**Kind**: global variable  
-**Returns**: <code>boolean</code> - <p>char is a upper-case letter</p>  
+```
+string[]
+```
+### arrayFromQuery(cssQuery)
 
-| Param | Type |
-| --- | --- |
-| char | <code>string</code> | 
+Create a genuine array from a css-query
 
-<a name="forceStringify"></a>
+***Parameters***
 
-## forceStringify ⇒ <code>String</code>
-<p>Convert anything to a string, an empty string if necessary.
-Expect sensible but not consistent cross-environment behaviour on functions.</p>
+- **`cssQuery`** (`string`)
 
-**Kind**: global variable  
-**Returns**: <code>String</code> - <p>string represention of anything</p>  
+***Return type***
 
-| Param | Type |
-| --- | --- |
-| value | <code>any</code> | 
+array with Elements
 
-<a name="arrayCombination"></a>
+```
+Node[]
+```
+### arrayIntersection(array1, array2)
 
-## arrayCombination(array1, array2) ⇒ <code>Array</code>
-<p>Find unique values from both arrays</p>
+Find unique values appearing in both arrays
 
-**Kind**: global function  
-**Returns**: <code>Array</code> - <p>the combination</p>  
+***Parameters***
 
-| Param | Type |
-| --- | --- |
-| array1 | <code>Array</code> | 
-| array2 | <code>Array</code> | 
+- **`array1`** (`any[]`)
+- **`array2`** (`any[]`)
 
-<a name="arrayIntersection"></a>
+***Return type***
 
-## arrayIntersection(array1, array2) ⇒ <code>Array</code>
-<p>Find unique values appearing in both arrays</p>
+the intersection
 
-**Kind**: global function  
-**Returns**: <code>Array</code> - <p>the intersection</p>  
+```
+any[]
+```
+### deepClone(variable)
 
-| Param | Type |
-| --- | --- |
-| array1 | <code>Array</code> | 
-| array2 | <code>Array</code> | 
+Recursively copy all indivisible data to new object
+Pay attention to Date and RegExp objects
 
-<a name="greet"></a>
+***Parameters***
 
-## greet()
-<p>The sake of package; log the console</p>
+- **`variable`** (`any`)
 
-**Kind**: global function  
-<a name="arrayFromQuery"></a>
+***Return type***
 
-## arrayFromQuery(cssQuery) ⇒ <code>Array.&lt;Node&gt;</code>
-<p>Create a genuine array from a css-query</p>
+the same data with different references
 
-**Kind**: global function  
-**Returns**: <code>Array.&lt;Node&gt;</code> - <p>array with Elements</p>  
+```
+any
+```
+### forceStringify(value)
 
-| Param | Type |
-| --- | --- |
-| cssQuery | <code>string</code> | 
+Try generic ways to produce a string, an empty string if necessary
 
-<a name="isAttachedToDom"></a>
+***Parameters***
 
-## isAttachedToDom(node) ⇒ <code>boolean</code>
-<p>Check node for being part of the DOM</p>
+- **`value`** (`any`)
 
-**Kind**: global function  
-**Returns**: <code>boolean</code> - <p>true when the node is on the webpage</p>  
+***Return type***
 
-| Param | Type |
-| --- | --- |
-| node | <code>Node</code> | 
+string represention of anything
 
-<a name="mathSum"></a>
+```
+string
+```
+### greet()
 
-## mathSum(seq) ⇒ <code>number</code>
-<p>Calculate sum of array with Numbers</p>
+The sake of package; log the console
 
-**Kind**: global function  
-**Returns**: <code>number</code> - <p>the sum of the numbers</p>  
+***Return type***
 
-| Param | Type | Description |
-| --- | --- | --- |
-| seq | <code>Array.&lt;number&gt;</code> | <p>array containing numbers</p> |
+```
+void
+```
+### hasOwnProperty(object, prop)
 
-<a name="roundAtDecimals"></a>
+Check for existence of property in object
 
-## roundAtDecimals(origin, decimals) ⇒ <code>number</code>
-<p>Round at decimals</p>
+***Parameters***
 
-**Kind**: global function  
-**Returns**: <code>number</code> - <p>the rounded number</p>  
+- **`object`** (`Record<string, unknown>`)
+- **`prop`** (`string`)
 
-| Param | Type | Description |
-| --- | --- | --- |
-| origin | <code>number</code> | <p>any number to round</p> |
-| decimals | <code>number</code> | <p>number of decimals to round at</p> |
+***Return type***
 
-<a name="isEqualSigns"></a>
+the object has the property as its own property -- not inheriting it
 
-## isEqualSigns(anonymus) ⇒ <code>boolean</code>
-<p>Check all arguments for being a number with the same sign</p>
+```
+boolean
+```
+### isAlphaNumeric(word)
 
-**Kind**: global function  
-**Returns**: <code>boolean</code> - <p>equality</p>  
+Test for being a string consisting of letters and/or digits
 
-| Param | Type | Description |
-| --- | --- | --- |
-| anonymus | <code>Arguments</code> | <p>numeric arguments</p> |
+***Parameters***
 
-<a name="isUsableNumber"></a>
+- **`word`** (`string`)
 
-## isUsableNumber(anonymous) ⇒ <code>boolean</code>
-<p>Test for values with which calculations can be done</p>
+***Return type***
 
-**Kind**: global function  
-**Returns**: <code>boolean</code> - <p>every argument is a usable number</p>  
+consists of letters and/or digits only
 
-| Param | Type | Description |
-| --- | --- | --- |
-| anonymous | <code>Arguments</code> | <p>one or more values to test</p> |
+```
+boolean
+```
+### isAttachedToDom(elm)
 
-<a name="deepClone"></a>
+Check node for being part of the DOM
 
-## deepClone(variable) ⇒ <code>any</code>
-<p>Recursively copy all indivisible data to new object
-Pay attention to Date and RegExp objects</p>
+***Parameters***
 
-**Kind**: global function  
-**Returns**: <code>any</code> - <p>the same data with different references</p>  
+- **`elm`** (`Element`)
 
-| Param | Type | Description |
-| --- | --- | --- |
-| variable | <code>any</code> | <p>any value to check</p> |
+***Return type***
 
-<a name="hasOwnProperty"></a>
+true when the node is on the webpage
 
-## hasOwnProperty(object, prop) ⇒ <code>boolean</code>
-<p>Check for existence of property in object</p>
+```
+boolean
+```
+### isChar(char)
 
-**Kind**: global function  
-**Returns**: <code>boolean</code> - <p>the object has the property as its own property -- not inheriting it</p>  
+Test value for being a character; a string with a length of one
 
-| Param | Type |
-| --- | --- |
-| object | <code>object</code> | 
-| prop | <code>string</code> | 
+***Parameters***
 
-<a name="isExactMatch"></a>
+- **`char`** (`string`)
 
-## isExactMatch(word, regex) ⇒ <code>boolean</code>
-<p>Check for a match covering the string entirely</p>
+***Return type***
 
-**Kind**: global function  
-**Returns**: <code>boolean</code> - <p>all characters of the word were described in regex</p>  
+is a single character
 
-| Param | Type |
-| --- | --- |
-| word | <code>string</code> | 
-| regex | <code>RegExp</code> | 
+```
+boolean
+```
+### isDigit(char)
 
-<a name="arrayFromCommaSeparatedList"></a>
+Test value for being a string representation of a digit
 
-## arrayFromCommaSeparatedList(commaSeperatedList) ⇒ <code>Array.&lt;string&gt;</code>
-<p>Process comma separated list to a sanitised array with normalised strings</p>
+***Parameters***
 
-**Kind**: global function  
-**Returns**: <code>Array.&lt;string&gt;</code> - <p>array with separate strings</p>  
+- **`char`** (`string`)
 
-| Param | Type |
-| --- | --- |
-| commaSeperatedList | <code>string</code> | 
+***Return type***
 
-<a name="isChar"></a>
+is a number 0-9
 
-## isChar(char) ⇒ <code>boolean</code>
-<p>Test value for being a character; a string with a length of one</p>
+```
+boolean
+```
+### isEqualSigns()
 
-**Kind**: global function  
-**Returns**: <code>boolean</code> - <p>is a single character</p>  
+Check all arguments for being a number with the same sign
 
-| Param | Type |
-| --- | --- |
-| char | <code>string</code> | 
+***Return type***
 
-<a name="isAlphaNumeric"></a>
+equality
 
-## isAlphaNumeric(word) ⇒ <code>boolean</code>
-<p>Test for being a string consisting of letters and/or digits</p>
+```
+boolean
+```
+### isExactMatch(word, regex)
 
-**Kind**: global function  
-**Returns**: <code>boolean</code> - <p>consists of letters and/or digits only</p>  
+Check for a match covering the string entirely
 
-| Param | Type |
-| --- | --- |
-| word | <code>string</code> | 
+***Parameters***
 
-<a name="forceStringify"></a>
+- **`word`** (`string`)
+- **`regex`** (`RegExp`)
 
-## forceStringify(value) ⇒ <code>String</code>
-<p>Try generic ways to produce a string, an empty string if necessary</p>
+***Return type***
 
-**Kind**: global function  
-**Returns**: <code>String</code> - <p>string represention of anything</p>  
+all characters of the word were described in regex
 
-| Param | Type |
-| --- | --- |
-| value | <code>any</code> | 
+```
+boolean
+```
+### isFundamental(value)
 
+Check value for indivisible:
+string, number, boolean, bigint, symbol, undefined, null, function
+
+***Parameters***
+
+- **`value`** (`unknown`)
+
+***Return type***
+
+```
+boolean
+```
+### isLetter(char)
+
+Test value for being a letter
+
+***Parameters***
+
+- **`char`** (`string`)
+
+***Return type***
+
+char is a letter
+
+```
+boolean
+```
+### isLower(char)
+
+Test value for being a lowercase letter
+
+***Parameters***
+
+- **`char`** (`string`)
+
+***Return type***
+
+char is a lower-case letter
+
+```
+boolean
+```
+### isPrimitive(value)
+
+Check value for being a primitive
+but leave out the anti-value undefined;
+
+***Parameters***
+
+- **`value`** (`unknown`)
+
+***Return type***
+
+is a primitive
+
+```
+boolean
+```
+### isUpper(char)
+
+Test value for being an uppercase letter
+
+***Parameters***
+
+- **`char`** (`string`)
+
+***Return type***
+
+char is a upper-case letter
+
+```
+boolean
+```
+### isUsableNumber(...args)
+
+Test for values with which calculations can be done
+
+***Parameters***
+
+- **`args`** (`number[]`)
+
+***Return type***
+
+every argument is a usable number
+
+```
+boolean
+```
+### isWrappedPrimitive(value)
+
+Check the variable for living in an object wrapper
+These can be generated by new String / Number etc.
+see https://developer.mozilla.org/en-US/docs/Glossary/Primitive
+
+***Parameters***
+
+- **`value`** (`unknown`)
+
+***Return type***
+
+is a wrapped primitive
+
+```
+boolean
+```
+### mathAvg(seq)
+
+Calculate average of array with Numbers
+
+***Parameters***
+
+- **`seq`** (`number[]`)
+
+***Return type***
+
+the average of the numbers
+
+```
+number
+```
+### mathSum(seq)
+
+Calculate sum of array with Numbers
+
+***Parameters***
+
+- **`seq`** (`number[]`)
+
+***Return type***
+
+the sum of the numbers
+
+```
+number
+```
+### roundAtDecimals(origin, decimals)
+
+Round at decimals
+
+***Parameters***
+
+- **`origin`** (`number`)
+- **`decimals`** (`number`)
+
+***Return type***
+
+the rounded number
+
+```
+number
+```
+### roundAtDigits(origin, digits)
+
+Round at digits; round with significance
+
+***Parameters***
+
+- **`origin`** (`number`)
+- **`digits`** (`number`)
+
+***Return type***
+
+the rounded number
+
+```
+number
+```
+### roundAtDigitsExponent(origin, digits)
+
+Round at digits to exponential notation; round with significance
+
+***Parameters***
+
+- **`origin`** (`number`)
+- **`digits`** (`number`)
+
+***Return type***
+
+the rounded number as exponent
+
+```
+string
+```
+### stringify(value)
+
+Convert anything to a string, an empty string if necessary.
+Expect sensible but not consistent cross-environment behaviour on functions.
+
+***Parameters***
+
+- **`value`** (`any`)
+
+***Return type***
+
+string represention of anything
+
+```
+string
+```

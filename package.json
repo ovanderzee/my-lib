@@ -6,6 +6,7 @@
   "module": "module/myLib.js",
   "scripts": {
     "prebuild": "cf dist module && prettier './src/**/*.js' --write",
+    "postbuild": "node gen-ts-docs.mjs && markdown-include ./md/markdown.json",
     "build": "rollup --config",
     "coverage": "cf coverage && jest --coverage",
     "once": "npm run test && npm run build",
@@ -42,6 +43,7 @@
     "eslint": "^8.6.0",
     "eslint-plugin-jasmine": "^4.1.3",
     "eslint-plugin-jest": "^25.3.4",
+    "generate-ts-docs": "^0.0.13",
     "jest": "^27.4.5",
     "jsdoc-babel": "^0.5.0",
     "markdown-include": "^0.4.3",
