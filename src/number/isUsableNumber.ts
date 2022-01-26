@@ -1,11 +1,11 @@
 /**
  * Test for values with which calculations can be done
- * @param {Arguments} anonymous - one or more values to test
+ * @param {Arguments} nums - one or more numeric values to test
  * @returns {boolean} every argument is a usable number
  */
-const isUsableNumber = function (...args: number[]): boolean {
-    let isUsable = Boolean(args.length)
-    const numbers = Array.from(args)
+const isUsableNumber = function (...nums: number[]): boolean {
+    let isUsable = Boolean(nums.length)
+    const numbers = Array.from(nums)
     numbers.forEach((value) => {
         isUsable =
             isUsable && typeof value === 'number' && Number.isFinite(value)

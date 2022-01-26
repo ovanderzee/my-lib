@@ -178,9 +178,14 @@ is a number 0-9
 ```
 boolean
 ```
-### isEqualSigns()
+### isEqualSigns(...nums)
 
 Check all arguments for being a number with the same sign
+(Zero is sign-neutral)
+
+***Parameters***
+
+- **`nums`** (`number[]`)
 
 ***Return type***
 
@@ -280,13 +285,13 @@ char is a upper-case letter
 ```
 boolean
 ```
-### isUsableNumber(...args)
+### isUsableNumber(...nums)
 
 Test for values with which calculations can be done
 
 ***Parameters***
 
-- **`args`** (`number[]`)
+- **`nums`** (`number[]`)
 
 ***Return type***
 

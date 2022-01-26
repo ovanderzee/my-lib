@@ -1,9 +1,9 @@
 /**
  * Test for values with which calculations can be done
- * @param {Arguments} anonymous - one or more values to test
+ * @param {Arguments} nums - one or more numeric values to test
  * @returns {boolean} every argument is a usable number
  */
-declare const isUsableNumber: (...args: number[]) => boolean;
+declare const isUsableNumber: (...nums: number[]) => boolean;
 
 /**
  * Test value for being a character; a string with a length of one
@@ -111,10 +111,11 @@ declare const arrayFromQuery: (cssQuery: string) => Node[];
 
 /**
  * Check all arguments for being a number with the same sign
- * @param {Arguments} anonymous - numeric arguments
+ * (Zero is sign-neutral)
+ * @param {Arguments} nums - numeric arguments
  * @return {boolean} equality
  */
-declare const isEqualSigns: () => boolean;
+declare const isEqualSigns: (...nums: number[]) => boolean;
 
 /**
  * Process comma separated list to a sanitised array with normalised strings

@@ -1,14 +1,15 @@
 /**
  * Check all arguments for being a number with the same sign
- * @param {Arguments} anonymous - numeric arguments
+ * (Zero is sign-neutral)
+ * @param {Arguments} nums - numeric arguments
  * @return {boolean} equality
  */
-const isEqualSigns = function (): boolean {
-    let positives: number[] = [...arguments].filter((arg) => arg >= 0)
-    let negatives: number[] = [...arguments].filter((arg) => arg <= 0)
+const isEqualSigns = function (...nums: number[]): boolean {
+    let positives: number[] = [...nums].filter((arg) => arg >= 0)
+    let negatives: number[] = [...nums].filter((arg) => arg <= 0)
     return (
-        positives.length === arguments.length ||
-        negatives.length === arguments.length
+        positives.length === nums.length ||
+        negatives.length === nums.length
     )
 }
 

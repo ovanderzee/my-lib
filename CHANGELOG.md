@@ -1,6 +1,12 @@
 # Changelog
 
 
+## [2.0.1] - 2022-01-26
+
+### Fixed
+- Made isEqualSigns to accept arguments in typescript projects
+
+
 ## [2.0.0] - 2022-01-06
 
 Modernisation. Most work has potential to be breaking, but all tests stand

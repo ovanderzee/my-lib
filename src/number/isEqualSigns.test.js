@@ -2,17 +2,17 @@ import { isEqualSigns } from './isEqualSigns'
 
 // signEquality
 
-test('isEqualSigns returns true when all args are numbers with the sane sign, including zero', () => {
+test('isEqualSigns returns true when all arguments are numbers with the sane sign, including zero', () => {
     expect(isEqualSigns(0, 1, 2, 3)).toBe(true)
     expect(isEqualSigns(0, -1, -2, -3)).toBe(true)
 })
 
-test('isEqualSigns returns true when all args are strings with equal signed numbers, including zero', () => {
-    expect(isEqualSigns('0', '1', '2', '3')).toBe(true)
-    expect(isEqualSigns('0', ' -1 ', '-2', '-3')).toBe(true)
+test('isEqualSigns returns true when some arguments are strings with equal signed numbers, including zero', () => {
+    expect(isEqualSigns('0', '1', 2, '3')).toBe(true)
+    expect(isEqualSigns('0', -1, '-2', '-3')).toBe(true)
 })
 
-test('isEqualSigns returns false when the args evaluate to numbers with mixed signs', () => {
+test('isEqualSigns returns false when the arguments evaluate to numbers with mixed signs', () => {
     expect(isEqualSigns(0, -1, 2, -3)).toBe(false)
     expect(isEqualSigns('0', '-1', '2', '-3')).toBe(false)
 })
