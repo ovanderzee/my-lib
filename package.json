@@ -1,6 +1,6 @@
 {
   "name": "my-lib",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "library of recurring, unconnected functions",
   "main": "dist/myLib.js",
   "module": "module/myLib.js",
@@ -10,7 +10,7 @@
     "build": "rollup --config",
     "coverage": "cf coverage && jest --coverage",
     "once": "npm test && npm run build",
-    "prepublish": "npm run once",
+    "prepublish": "npm run build",
     "pretest": "eslint src/*.*",
     "test": "jest",
     "watch": "onchange --initial \"src/**/*.js\" -- npm run once --silent"
