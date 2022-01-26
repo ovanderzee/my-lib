@@ -9,7 +9,8 @@
     "postbuild": "node gen-ts-docs.mjs && markdown-include ./md/markdown.json",
     "build": "rollup --config",
     "coverage": "cf coverage && jest --coverage",
-    "once": "npm run test && npm run build",
+    "once": "npm test && npm run build",
+    "prepublish": "npm run once",
     "pretest": "eslint src/*.*",
     "test": "jest",
     "watch": "onchange --initial \"src/**/*.js\" -- npm run once --silent"

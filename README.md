@@ -3,7 +3,7 @@
 
 # my-lib
 
-Library of recurring, unconnected functions
+Library of recurring, unconnected but pure functions
 
 ## Install and usage
 
