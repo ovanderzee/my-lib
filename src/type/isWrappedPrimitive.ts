@@ -6,12 +6,13 @@
  * @returns {boolean} is a wrapped primitive
  */
 const isWrappedPrimitive = function (value: unknown): boolean {
-    const result = typeof value === 'object' &&
-    (value instanceof String ||
-        value instanceof Number ||
-        value instanceof BigInt ||
-        value instanceof Boolean ||
-        value instanceof Symbol)
+    const result =
+        typeof value === 'object' &&
+        (value instanceof String ||
+            value instanceof Number ||
+            value instanceof BigInt ||
+            value instanceof Boolean ||
+            value instanceof Symbol)
 
     return result
 }

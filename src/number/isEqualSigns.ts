@@ -7,10 +7,7 @@
 const isEqualSigns = function (...nums: number[]): boolean {
     let positives: number[] = [...nums].filter((arg) => arg >= 0)
     let negatives: number[] = [...nums].filter((arg) => arg <= 0)
-    return (
-        positives.length === nums.length ||
-        negatives.length === nums.length
-    )
+    return positives.length === nums.length || negatives.length === nums.length
 }
 
 export { isEqualSigns }

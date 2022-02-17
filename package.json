@@ -5,7 +5,7 @@
   "main": "dist/myLib.js",
   "module": "module/myLib.js",
   "scripts": {
-    "prebuild": "cf dist module && prettier './src/**/*.js' --write",
+    "prebuild": "cf dist module && prettier './src/**/*.ts' --write",
     "postbuild": "node gen-ts-docs.mjs && markdown-include ./md/markdown.json",
     "build": "rollup --config",
     "coverage": "cf coverage && jest --coverage",
@@ -13,7 +13,7 @@
     "prepublish": "npm run build",
     "pretest": "eslint src/*.*",
     "test": "jest",
-    "watch": "onchange --initial \"src/**/*.js\" -- npm run once --silent"
+    "watch": "onchange --initial \"src/**/*.ts\" -- npm run once --silent"
   },
   "types": "types/index.d.ts",
   "keywords": [

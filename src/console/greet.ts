@@ -1,7 +1,7 @@
 /**
  * The sake of package; log the console
  */
-const greet = ():void => {
+const greet = (): void => {
     // The epic proof of getting through
     console.log('Hello World!')
 }

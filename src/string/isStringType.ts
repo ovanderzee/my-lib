@@ -8,10 +8,8 @@ import { isDigit, isLetter } from './isCharType'
 const isAlphaNumeric = (word: string): boolean => {
     return Boolean(
         word &&
-        word.split &&
-        !word.split('').some((char) => {
-            return !(isLetter(char) || isDigit(char))
-        })
+            word.split &&
+            !word.split('').some((char) => !(isLetter(char) || isDigit(char))),
     )
 }
 

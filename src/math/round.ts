@@ -21,7 +21,10 @@ const roundAtDecimals = function (origin: number, decimals: number): number {
  * @param {number} digits - number of significant digits to round at
  * @returns {string} the rounded number as exponent
  */
-const roundAtDigitsExponent = function (origin: number, digits: number): string {
+const roundAtDigitsExponent = function (
+    origin: number,
+    digits: number,
+): string {
     if (isNaN(origin) || !Number.isInteger(digits) || digits < 1) return 'NaN'
 
     const absolute = Math.abs(origin)

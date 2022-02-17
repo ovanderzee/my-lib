@@ -4,7 +4,10 @@
  * @param {string} prop
  * @returns {boolean} the object has the property as its own property -- not inheriting it
  */
-const hasOwnProperty = function (object: Record<string, unknown>, prop: string): boolean {
+const hasOwnProperty = function (
+    object: Record<string, unknown>,
+    prop: string,
+): boolean {
     const hasIt = Object.prototype.hasOwnProperty.call(object, prop)
     return hasIt
 }
