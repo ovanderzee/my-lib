@@ -6,9 +6,9 @@
 const arrayFromCommaSeparatedList = function (
     commaSeparatedList: string,
 ): string[] {
-    let list = commaSeparatedList.split(',')
+    const list = commaSeparatedList.split(',')
     // normalise
-    let trimmed = list.map((item) => item.trim().replace(/\s+/g, ' '))
+    const trimmed = list.map((item) => item.trim().replace(/\s+/g, ' '))
     // sanitise
     return trimmed.filter((item) => {
         return item.length

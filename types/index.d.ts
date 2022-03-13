@@ -37,7 +37,8 @@ declare const isLower: (char: string) => boolean;
 declare const isUpper: (char: string) => boolean;
 
 /**
- * Test for being a string consisting of letters and/or digits
+ * Test for being a string consisting of letters and/or digits,
+ * for being undelimited
  * @param {string} word
  * @returns {boolean} consists of letters and/or digits only
  */

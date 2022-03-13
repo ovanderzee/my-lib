@@ -120,7 +120,8 @@ boolean
 ```
 ### isAlphaNumeric(word)
 
-Test for being a string consisting of letters and/or digits
+Test for being a string consisting of letters and/or digits,
+for being undelimited
 
 ***Parameters***
 

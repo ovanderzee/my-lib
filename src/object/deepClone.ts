@@ -12,7 +12,7 @@ const deepClone = function (variable: any): any {
         return variable
     } else if (Array.isArray(variable)) {
         product = []
-        for (let value of variable) {
+        for (const value of variable) {
             product.push(deepClone(value))
         }
     } else if (variable instanceof Date) {
@@ -21,7 +21,7 @@ const deepClone = function (variable: any): any {
         product = new RegExp(variable.source, variable.flags)
     } else if (typeof variable === 'object') {
         product = {}
-        for (let [key, value] of Object.entries(variable)) {
+        for (const [key, value] of Object.entries(variable)) {
             product[key] = deepClone(value)
         }
     }

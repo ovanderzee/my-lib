@@ -27,6 +27,7 @@ const testObject = {
         a: 1,
         b: 'b',
     },
+    /* @ts-ignore */
     functionNoop: () => {},
     functionSomething: (a, b) => [a, b],
     dateToday: new Date(),
