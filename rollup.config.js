@@ -32,5 +32,5 @@ export default [{
     file: "types/index.d.ts",
     format: "es",
   },
-  plugins: [dts.default()],
+  plugins: [dts()],
 }]

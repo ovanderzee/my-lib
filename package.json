@@ -4,10 +4,11 @@
   "description": "library of recurring, unconnected functions",
   "main": "dist/myLib.js",
   "module": "module/myLib.js",
+  "type": "module",
   "scripts": {
     "prebuild": "cf dist module && prettier './src/**/*.ts' --write",
-    "postbuild": "node gen-ts-docs.mjs && markdown-include ./md/markdown.json",
-    "build": "rollup --config --bundleConfigAsCjs",
+    "postbuild": "node gen-ts-docs.js && markdown-include ./md/markdown.json",
+    "build": "rollup --config",
     "coverage": "cf coverage && jest --coverage",
     "once": "npm test && npm run build",
     "prepublish": "npm run build",

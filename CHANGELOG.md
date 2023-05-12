@@ -1,6 +1,11 @@
 # Changelog
 
 
+## [2.1.0] - 2023-01-26
+
+### Added
+- Turn the package in a true es-module
+
 ## [2.0.1] - 2022-01-26
 
 ### Fixed
