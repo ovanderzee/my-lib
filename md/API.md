@@ -6,15 +6,15 @@ Find unique values from both arrays
 
 ***Parameters***
 
-- **`array1`** (`any[]`)
-- **`array2`** (`any[]`)
+- **`array1`** (`unknown[]`)
+- **`array2`** (`unknown[]`)
 
 ***Return type***
 
 the combination
 
 ```
-any[]
+unknown[]
 ```
 ### arrayFromCommaSeparatedList(commaSeparatedList)
 
@@ -60,7 +60,7 @@ Find unique values appearing in both arrays
 the intersection
 
 ```
-any[]
+unknown[]
 ```
 ### deepClone(variable)
 

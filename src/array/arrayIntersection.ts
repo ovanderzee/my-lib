@@ -4,7 +4,7 @@
  * @param {Array} array2
  * @return {Array} the intersection
  */
-const arrayIntersection = function (array1: any[], array2: any[]): any[] {
+const arrayIntersection = function (array1: any[], array2: any[]): unknown[] {
     const lookup: Record<string, number> = {}
     array1.forEach((member) => (lookup[member] = 1))
     return array2.filter((member) => {

@@ -18,7 +18,7 @@ describe('stringify converts using toString method of the prototype', () => {
         expect(dateStringParts[5]).toBe('32')
         expect(dateStringParts[6]).toBe('00')
 
-        expect(spyDateToString).toHaveBeenCalled()
+        expect(spyDateToString).toHaveBeenCalledWith()
     })
 
     test('for example a RegExp', () => {
@@ -27,7 +27,7 @@ describe('stringify converts using toString method of the prototype', () => {
         const regexpString = stringify(aRegExp)
 
         expect(regexpString).toBe('/^/g')
-        expect(spyRegExpToString).toHaveBeenCalled()
+        expect(spyRegExpToString).toHaveBeenCalledWith()
     })
 
     test('for example a String', () => {
@@ -70,7 +70,7 @@ describe('stringify converts using toString method of the prototype', () => {
         const errorString = stringify(anError)
 
         expect(errorString).toBe('Error: Dead end!')
-        expect(spyErrorToString).toHaveBeenCalled()
+        expect(spyErrorToString).toHaveBeenCalledWith()
     })
 
     test('for example a Function', () => {
@@ -78,12 +78,17 @@ describe('stringify converts using toString method of the prototype', () => {
           Not cross-environment consistent,
           test assumes nodeJS 12.18.0
         */
-        const aFunction = () => {}
+        const aFunction = () => 'stringification'
         const spyFunctionToString = jest.spyOn(aFunction, 'toString')
         const functionString = stringify(aFunction)
 
-        expect(functionString).toBe('function aFunction() {}')
-        expect(spyFunctionToString).toHaveBeenCalled()
+        expect(functionString.includes('function aFunction()')).toBeTruthy()
+
+        expect(
+            functionString.includes("return 'stringification';"),
+        ).toBeTruthy()
+
+        expect(spyFunctionToString).toHaveBeenCalledWith()
     })
 })
 
@@ -94,7 +99,7 @@ describe('stringify uses forceStringify when toString is not available', () => {
         const undefString = stringify(undefValue)
 
         expect(undefString).toBe('undefined')
-        expect(spyJsonStringify).not.toHaveBeenCalled()
+        expect(spyJsonStringify).not.toHaveBeenCalledWith(undefValue)
     })
     test('for example with null', () => {
         const nullValue = null
@@ -102,7 +107,7 @@ describe('stringify uses forceStringify when toString is not available', () => {
         const nullString = stringify(nullValue)
 
         expect(nullString).toBe('null')
-        expect(spyJsonStringify).not.toHaveBeenCalled()
+        expect(spyJsonStringify).not.toHaveBeenCalledWith(nullValue)
     })
 
     test('for example with a home made object', () => {
@@ -117,7 +122,8 @@ describe('stringify uses forceStringify when toString is not available', () => {
         expect(objectString).toBe(
             '{"id":459727,"name":"itsName","marked":false}',
         )
-        expect(spyJsonStringify).toHaveBeenCalled()
+
+        expect(spyJsonStringify).toHaveBeenCalledWith(objectValue)
     })
 
     test('for example with Object.create(null)', () => {
@@ -126,7 +132,7 @@ describe('stringify uses forceStringify when toString is not available', () => {
         const createNullString = stringify(createNullValue)
 
         expect(createNullString).toBe('{}')
-        expect(spyJsonStringify).toHaveBeenCalled()
+        expect(spyJsonStringify).toHaveBeenCalledWith(createNullValue)
     })
 })
 
@@ -142,6 +148,6 @@ describe('stringify returns empty string when no generic method works', () => {
         const cyclicString = stringify(cyclicValue)
 
         expect(cyclicString).toBe('')
-        expect(spyJsonStringify).toHaveBeenCalled()
+        expect(spyJsonStringify).toHaveBeenCalledWith(cyclicValue)
     })
 })

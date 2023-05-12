@@ -93,7 +93,7 @@ declare const greet: () => void;
  * @param {Array} array2
  * @return {Array} the combination
  */
-declare const arrayCombination: (array1: any[], array2: any[]) => any[];
+declare const arrayCombination: (array1: unknown[], array2: unknown[]) => unknown[];
 
 /**
  * Find unique values appearing in both arrays
@@ -101,7 +101,7 @@ declare const arrayCombination: (array1: any[], array2: any[]) => any[];
  * @param {Array} array2
  * @return {Array} the intersection
  */
-declare const arrayIntersection: (array1: any[], array2: any[]) => any[];
+declare const arrayIntersection: (array1: any[], array2: any[]) => unknown[];
 
 /**
  * Create a genuine array from a css-query

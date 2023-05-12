@@ -1,10 +1,10 @@
 /**
  * Helper function to produce a string, an empty string if necessary
  * @private
- * @param {any} value
+ * @param {unknown} value
  * @return {String} string represention of anything
  */
-const finalStringify = function (value: any): string {
+const finalStringify = function (value: unknown): string {
     try {
         return JSON.stringify(value)
     } catch (e) {
