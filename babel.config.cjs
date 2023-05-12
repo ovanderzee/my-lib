@@ -1,5 +1,5 @@
 // babel.config.js
-export function (api) {
+module.exports = function (api) {
   api.cache(true)
 
   const presets = [
